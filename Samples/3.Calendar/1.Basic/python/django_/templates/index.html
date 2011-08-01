@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>  	
+    <title>Calender API</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/tutorial_python/calender/django/static/js/jquery-1.5.2.js"></script>
+	<script type="text/javascript" src="/tutorial_python/calender/django/static/js/index.js"></script>
+	<link href="/tutorial_python/calender/django/static/style/style.css" rel="stylesheet" type="text/css" media="all" /> 	
+  </head>
+  <body onLoad='init();'>
+  		<div id="calender_wrap">
+  			<h1><center>Calender API</center></h1>			
+			<div id="calender">				
+				<a href="/tutorial_python/calender/django/calender/main/{{ prev_date }}">{{ prev_date }}</a> | <span id="now_date">{{ now_date }}</span> | <a href="/tutorial_python/calender/django/calender/main/{{ next_date }}">{{ next_date }}</a>
+
+                <ul id="title">
+					<li id="day"><span id="sunday">일</span></li>
+					<li id="day">월</li><li id="day">화</li><li id="day">수</li><li id="day">목</li><li id="day">금</li>
+					<li id="day"><span id="saturday">토</span></li>
+				</ul>
+                <ul>
+                {% for day in calender %}
+                    <li>
+                        {% if day != 'previous' %}
+                            <a href="javascript:create_event('{{ day.1 }}')"><span id="{{ day.0}}">{{ day.2 }}</span></a>
+                            <div id="detail">
+                                {% for event in day.3 %}
+                                    <span onclick="view_event('{{ event.1 }}','{{ event.2 }}')">{{ event.3 }}</span><br>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </li>
+                   {% endfor %}
+                </ul>
+			</div>		   
+  		</div>  		
+		<div id="manage_wrap">
+			<form action="/tutorial_python/calender/django/calender/main/create_event" id="create_event" method="post">
+				<input type="hidden" name="event_mode" id="event_mode" value="0"/>
+				<input type="hidden" name="event_id" id="event_id" value=""/>
+				<ul>
+					<li>날짜 : <input type="text" id="start_date" name="start_date" size="10"/> ~ <input type="text" id="end_date" name="end_date" size="10"/></li>
+					<li>일정 제목 : <input type="text" id="event_title" name="event_title" size="20" value=""/></li>                    
+					<li>일정 내용 : <input type="text" id="event_content" name="event_content" size="20"/></li>		
+				</ul>
+				<ul id="manage_btn">
+					<li>
+						<input type="submit" id="event_submit" value="생성" onclick="return create_event_submit()"/>
+                        <input type="button" id="btn_delete" value="삭제"  onclick="return delete_event()" />
+                        <input type="button" id="close_modal" value="닫기"/>
+					</li>
+				</ul>
+			</form>			
+		</div> 
+	    <div id="mask"></div>		
+        <div id="api_result"></div>
+		<div id="loading"><img src="/tutorial_python/calender/django/static/resource/loading.gif"/></div>
+  </body>
+</html>  

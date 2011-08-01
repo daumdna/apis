@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html> 
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<title>Daum 지도 API v3 예제: 기본 마커 올리기</title> 
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=DAUM_MAPS_DEMO_APIKEY" charset="utf-8"></script> 
+<script type="text/javascript"> 
+	var map;
+	function init() {
+		map = new daum.maps.Map(document.getElementById('map'), {
+			center: new daum.maps.LatLng(37.537123, 127.005523)
+		});
+
+		var marker = new daum.maps.Marker({
+			position: new daum.maps.LatLng(37.537123, 127.005523)
+		});
+		marker.setMap(map);
+	}
+</script> 
+</head> 
+<body onload="init()">
+	<div id="map" style="width:600px;height:600px;"></div>
+</body> 
+</html> 

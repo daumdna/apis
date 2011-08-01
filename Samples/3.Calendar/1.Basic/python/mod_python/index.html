@@ -1,0 +1,130 @@
+<!doctype html5>
+<html>
+  <head>  	
+    <title>Calender API</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="js/jquery-1.5.2.js"></script>
+	<link href="style/style.css" rel="stylesheet" type="text/css" media="all" /> 	
+	<script type="text/javascript">
+		
+		function create_event(day){			
+			$("#event_submit").val('생성');					
+			$('#start_date').val(day);
+			$('#end_date').val(day);
+			$('#event_title').val('');
+			$('#event_content').val('');
+			$("#event_mode").val('0');
+			$("#api_result").css('display','none');		
+			$("#delete_event").css('display','none');
+			$('#manage_wrap').css('display','block');		
+		}
+		
+		function create_event_submit(){			
+			$("#loading").css('display','block');	
+			$.ajax({
+			  	type : "POST",
+			    url: 'createevent.py',
+				data: $("#create_event").serialize(),				
+			    success: function(response_text){								
+					 result(response_text);
+			    }
+			});
+			return false;
+		}
+		
+		function view_event(id,start_date){
+			$("#loading	").css('display','block');
+			$("#manage_wrap").css('display', 'none');
+			$.ajax({
+			  	type : "POST",
+			    url: 'viewevent.py',
+				data: 'id='+id+'&start_date='+start_date,				
+			    success: function(response_text){
+					split_response = response_text.split(',')
+					if (split_response.length <= 1) {
+
+			            $("#loading	").css('display','none');
+						$("#manage_wrap").css('display', 'none');
+						$("#api_result").html(response_text);
+						$("#api_result").css('display', 'block');
+					} else {
+						$("#loading").css('display','none');
+						$("#event_title").val(split_response[0]);
+						$("#event_content").val(split_response[1]);
+						$("#start_date").val(split_response[2]);					
+						$("#end_date").val(split_response[3]);
+						$("#event_id").val(split_response[4]);
+						$("#event_mode").val('1');
+						$("#event_submit").val('수정');
+						
+						$("#api_result").css('display', 'none');						
+						$("#delete_event").css('display','');
+						$("#manage_wrap").css('display', 'block');
+					}													
+			    }
+			});
+			return false;
+		}
+		
+		function delete_event(){
+			$("#loading").css('display','block');
+			$.ajax({
+			  	type : "POST",
+			    url: 'deleteevent.py',
+				data: 'id=' + $("#event_id").val(),				
+			    success: function(response_text){								
+					 result(response_text);
+			    }
+			});
+			return false;
+		}
+		
+		function result(response_text){
+			$("#loading").css('display','none');
+			$("#manage_wrap").css('display','none');
+			$("#api_result").html(response_text);
+			$("#api_result").css('display','block');
+			$(function(){
+				slider = setInterval(function(){
+					window.location.reload();
+				}, 1000);
+			});
+		
+		}
+	</script>
+  </head>
+  <body>
+  		<div id="calender_wrap">
+  			<h1><center>Calender API</center></h1>			
+			<div id="calender">				
+				%(calender_navi)s			
+				<ul id="title">
+					<li id="day"><span id="sunday">일</span></li>
+					<li id="day">월</li><li id="day">화</li><li id="day">수</li><li id="day">목</li><li id="day">금</li>
+					<li id="day"><span id="saturday">토</span></li>
+				</ul>
+				%(calender)s
+			</div>		   
+  		</div>  		
+		<div id="manage_wrap">
+			<form action="createevent.py" id="create_event" method="post">
+				<input type="hidden" name="event_mode" id="event_mode" value='0'>
+				<input type="hidden" name="event_id" id="event_id" value=''>
+				<ul>
+					<li>날짜 : <input type="text" id="start_date" name="start_date" size=10> ~ <input type="text" id="end_date" name="end_date" size=10></li>
+					<li>일정 제목 : <input type="text" id="event_title" name="event_title" size=20 value=""></li>
+					<li>일정 내용 : <input type="text" id="event_content" name="event_content" size=20> &nbsp;</li>					
+				</ul>
+				<ul id="manage_btn">
+					<li>
+						<input type="submit"  id="event_submit" value="생성" onclick="return create_event_submit()">
+						<a href="deleteevent.py" onclick="return delete_event()"><input type="button"  id="delete_event" value="삭제"></a>
+					</li>
+				</ul>
+			</form>			
+		</div> 
+		<div id="api_result">			
+		</div>
+		<div id="loading"><img src="resource/loading.gif"></div>
+  </body>
+</html>  

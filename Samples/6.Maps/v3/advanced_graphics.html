@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html> 
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<title>Daum 지도 API v3 예제: 선, 원, 폴리곤 올리기</title> 
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=DAUM_MAPS_DEMO_APIKEY" charset="utf-8"></script> 
+<script type="text/javascript"> 
+	var map;
+	function init() {
+		map = new daum.maps.Map(document.getElementById('map'), {
+			center: new daum.maps.LatLng(37.48779895934866, 127.03130020103005),
+			level: 5
+		});
+		//라인 그리기
+		var line = new daum.maps.Polyline();
+		line.setPath([new daum.maps.LatLng(37.48779895934866, 127.03130020103005), new daum.maps.LatLng(37.48979895934866, 127.04130020103005)]);
+		line.setMap(map);
+
+		//원 그리기
+		var circle = new daum.maps.Circle({
+			center : new daum.maps.LatLng(37.48579895934866, 127.02530020103005),
+			radius : 400,
+			strokeWeight : 4,
+			strokeColor : "#00ff00"
+		});
+		circle.setMap(map);
+		
+		//폴리곤 그리기
+		var arr = [];
+		arr.push(new daum.maps.LatLng(37.48879895934866, 127.03250020103005));
+		arr.push(new daum.maps.LatLng(37.48979895934866, 127.03450020103005));
+		arr.push(new daum.maps.LatLng(37.48279895934866, 127.03350020103005));
+		arr.push(new daum.maps.LatLng(37.48879895934866, 127.03130020103005));
+		var polygon = new daum.maps.Polygon({
+			strokeWeight : 3,
+			strokeColor : "#1833e5",
+			strokeOpacity : 0.6,
+			fillColor : "#1833e5",
+			fillOpacity : 0.2
+		});
+		polygon.setPath(arr);
+		polygon.setMap(map);
+	}
+</script> 
+</head> 
+<body onload="init()"> 
+	<div id="map" style="width:600px;height:400px;"></div> 
+</body> 
+</html> 

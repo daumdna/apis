@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html> 
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<title>Daum 지도 API v3 예제: 이미지 마커 올리기</title> 
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=DAUM_MAPS_DEMO_APIKEY" charset="utf-8"></script> 
+<script type="text/javascript"> 
+	var map;
+	function init() {
+		map = new daum.maps.Map(document.getElementById('map'), {
+			center: new daum.maps.LatLng(37.537123, 127.005523),
+			level: 4
+		});
+		var points = [
+   		  	new daum.maps.LatLng(37.538779843072824,127.00200500605618),
+   			new daum.maps.LatLng(37.538635699652154,127.00030778301571),
+   			new daum.maps.LatLng(37.537338259427315,126.9998325645435),
+   			new daum.maps.LatLng(37.53377026138633,127.00288736856231),
+   			new daum.maps.LatLng(37.534941239454476,127.00920075758009)
+   		];
+
+		var icon = new daum.maps.MarkerImage(
+			'http://localimg.daum-img.net/localimages/07/2009/map/icon/blog_icon01_on.png',
+			new daum.maps.Size(31, 34),
+			new daum.maps.Point(16,34),
+			"poly",
+			"1,20,1,9,5,2,10,0,21,0,27,3,30,9,30,20,17,33,14,33"
+		);
+		
+		for(var i = 0; i < points.length; i++)
+		{
+			new daum.maps.Marker({
+				position: points[i],
+				image: icon
+			}).setMap(map);
+		}		     		
+	}
+</script> 
+</head> 
+<body onload="init()">
+	<div id="map" style="width:600px;height:600px;"></div>
+</body> 
+</html> 

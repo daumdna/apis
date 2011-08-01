@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html> 
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<title>Daum 지도 API v3 예제: 인포윈도우 올리기</title> 
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=DAUM_MAPS_DEMO_APIKEY" charset="utf-8"></script>
+<script type="text/javascript"> 
+	var map;
+	function init() {
+		map = new daum.maps.Map(document.getElementById('map'), {
+			center: new daum.maps.LatLng(37.537123, 127.005523),
+			level: 2
+		});
+
+		var marker = new daum.maps.Marker({
+			position: map.getCenter()
+		});
+		marker.setMap(map);
+			
+		var infowindow = new daum.maps.InfoWindow({
+			content: '<p style="margin:7px 22px 7px 12px;font:12px/1.5 sans-serif"><strong>안녕하세요~</strong><br/>다음커뮤니케이션입니다.</p>',
+			removable : true
+		});
+		
+		daum.maps.event.addListener(marker, "click", function() {
+			infowindow.open(map, marker);
+		});
+
+		var infowindow_only = new daum.maps.InfoWindow({
+			position: new daum.maps.LatLng(37.5367434970359, 127.00491278024688),
+			content: '<p style="margin:7px 12px;font-size:12px">인포윈도우만 띄울 수도 있습니다.</p>'
+		});
+		infowindow_only.open(map);
+	}
+</script> 
+</head> 
+<body onload="init()">
+	<div id="map" style="width:600px;height:600px;"></div> 
+</body> 
+</html> 

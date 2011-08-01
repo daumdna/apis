@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html> 
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<title>Daum 지도 API v3 예제: 지도 범위 재설정하기</title> 
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=DAUM_MAPS_DEMO_APIKEY" charset="utf-8"></script>
+<script type="text/javascript"> 
+	var map;
+	function init() {
+		map = new daum.maps.Map(document.getElementById('map'), {
+			center: new daum.maps.LatLng(37.537123, 127.005523),
+			level: 3
+		});
+
+		// 좌표값들 지정
+		var points = new Array();
+		points[0] = new daum.maps.LatLng(37.529196714213114, 126.92506196011036);
+		points[1] = new daum.maps.LatLng(37.529197714213114, 127.17546196011036);
+		points[2] = new daum.maps.LatLng(37.529217714213114, 126.92526196011036);
+		points[3] = new daum.maps.LatLng(37.529257714213114, 126.92520196011036);
+		points[4] = new daum.maps.LatLng(37.530257714213114, 126.92530196011036);
+
+		// 빈 LatLngBounds 객체 생성
+		var bounds = new daum.maps.LatLngBounds();
+		
+		for(var i = 0; i < points.length; i++)
+		{
+			// 해당 좌표에 marker 올리기
+			new daum.maps.Marker({position:points[i]}).setMap(map);
+			// LatLngBounds 객체에 해당 좌표들을 포함
+			bounds.extend(points[i]);
+		}
+		// 좌표가 채워진 LatLngBounds 객체를 이용하여 지도 영역을 확장
+		map.setBounds(bounds);
+	}
+</script> 
+</head> 
+<body onload="init()"> 
+	<div id="map" style="width:600px;height:600px;"></div>
+</body> 
+</html> 

@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title> Get Resource</title>
+	<script type="text/javascript" src="js/sha1.js"></script>
+	<script type="text/javascript" src="js/oauth.js"></script>
+	<script type="text/javascript" >
+		
+		function getResource() {
+			
+			var message = {
+				action: "http://apis.daum.net/blog/category/list.do",
+				method: "GET",
+				parameters: {
+					oauth_consumer_key: "12ccdd1d-bd04-4885-85ac-262961d4669c",
+					oauth_signature_method: "HMAC-SHA1",
+					oauth_token: "22dee5a9-5de1-4d9b-9092-98a4544d0f3c",
+					blogName: "bt088"
+				}
+			};
+
+			OAuth.setTimestampAndNonce(message);
+			OAuth.SignatureMethod.sign(message, {
+				consumerSecret: "l3fx8q3TNSgZuhcf4J4ReuVf6vMNwIZIkxUkSgrf2JSF.Bq4zsZ_vA00",
+				tokenSecret : "JHCIDmi83h3J2L491xlTrpFzvSwndCspqhZedR9N7GB7.MXFXY844A00"
+				});
+			
+			var params = [];
+
+			for(var name in message.parameters) {
+				params.push(name + "=" + 
+				encodeURIComponent(message.parameters[name]));
+
+				//http://apis.daum.net/oauth/requestToeken?name=value&name=value
+			}
+
+			var url = message.action + "?" + params.join("&");
+
+			window.location = url;
+		}
+
+
+	</script>		
+
+</head>
+<body>
+	<button onclick="getResource()"> Get Resource </button>
+</body>
+</html>

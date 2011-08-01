@@ -1,0 +1,106 @@
+body {
+	margin:0;
+	padding:0;
+	font: 12px/1.5 "돋움", dotum, sans-serif;
+	height:100%;
+}
+h1,h4{
+	text-align:center;
+}
+span{
+	cursor:pointer;
+}
+a:link, a:visited, a:active, a:hover{
+	text-decoration:none;
+	color:black;	
+}
+
+#calender_wrap {
+	width:600px;
+	margin:0 auto;
+}
+#calender{
+	width:600px;	
+	height:600px;				
+	margin:0 auto;				
+}
+#calender ul{
+	list-style:none;
+	padding:0px;
+	margin:0px;
+	clear:both;
+}
+#calender li{
+	display:block;
+	float:left;
+	width:80px;
+	height:80px;
+	border:1px solid;			
+	text-align:center;
+	vertical-align:top;
+}		
+#now_date{
+	font-size: 16px;
+	font-weight:bold;
+    cursor:text;
+}
+#saturday{
+	color:blue;			
+}
+#sunday{
+	color:red;
+}
+#day{
+	color:black;
+}
+
+#detail {
+	text-align:center;
+}		
+#title #day, #title #sunday, #title #saturday{
+	height:20px;
+}	
+
+#manage_wrap, #api_result{
+	width:350px;
+    height:150px;
+	margin:0px auto 0px;
+	border:1px solid;
+	display:none;			
+	text-align:center;
+	position:absolute;
+    z-index:99;
+    background:white;
+}
+
+#api_result{
+	width:350px;
+    height:50px;
+	vertical-align:middle;
+	position:absolute;
+}
+
+#manage_btn{
+	list-style:none;
+	padding:0px;
+	margin:0px;
+	height:50px;
+}
+
+#loading{
+	top:50%;
+	left:50%;
+	position:absolute;
+	width:50px;
+    display:none;
+    z-index:100;
+}
+
+#mask {
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:98;
+  background-color:#000;
+  display:none;
+}

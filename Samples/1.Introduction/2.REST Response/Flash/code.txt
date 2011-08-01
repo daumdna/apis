@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" creationComplete="xmlRequest.send()">
+<mx:Panel title="Daum OpenAPI: 이미지 검색 API" width="100%" fontFamily="Verdana" fontSize="12">
+    <mx:HBox borderStyle="solid" paddingTop="10" paddingBottom="10" paddingLeft="10" paddingRight= "10"  height="100%" width="100%">
+	 <mx:VBox height="100%">
+		<mx:HBox width="100%">
+			<!-- 검색어 입력창 //-->
+			<mx:TextInput id="txtQuery" keyUp="xmlRequest.send();"  text="다음" width="195"/>
+			<!-- 검색된 전체 자료 수 -->
+			<mx:Label id="lblCount" text="{xmlRequest.lastResult.channel.totalCount}"/>
+		</mx:HBox>
+		
+		<!-- dataProvider는 channel 노드 밑에 item 노드들 -->
+		<mx:DataGrid id="dgList" height="100%" width="263"
+			 dataProvider="{xmlRequest.lastResult.channel.item}">
+			<mx:columns>				 
+				<mx:DataGridColumn headerText="제목" dataField="title"/>
+				<mx:DataGridColumn headerText="작성자" dataField="author"/>                                    
+			</mx:columns>
+		</mx:DataGrid>
+		 <mx:TextArea height="50%" width="263" htmlText="{dgList.selectedItem.image}" editable="false"/>
+	 </mx:VBox>
+	 
+	 <!--
+	 	 이미지 보여주는 부분
+	 	위에 dgPosts에서 선택된 item(즉, <channel><item><image/></item></channel> 이런 구조)
+	  -->
+	 <mx:Image id="imgSrc" source="{dgList.selectedItem.image}"/>
+ </mx:HBox>
+</mx:Panel>
+
+<!-- HTTP 요청을 위한 부분 -->
+<mx:HTTPService id="xmlRequest" url="http://apis.daum.net/search/image" useProxy="false" >
+	<mx:request>
+		<apikey>{발급 받은 키를 입력하세요.}</apikey>
+		<q>{txtQuery.text}</q>
+		<result>20</result>
+		<output>xml</output>
+	</mx:request>
+</mx:HTTPService>       
+</mx:Application>

@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title> Get Authorized</title>
+	<script type="text/javascript">
+	
+		function getAuthrized() {
+			
+			var url = "https://apis.daum.net/oauth/authorize";
+			url = url + "?oauth_token=" + 
+			document.getElementById("request-token").value;
+
+			window.location = url;
+
+		}
+
+	</script>
+</head>
+<body>
+	<input id="request-token" type="text"/>
+	<button onclick="getAuthrized()"> Get Authorized </button>
+</body>
+</html>

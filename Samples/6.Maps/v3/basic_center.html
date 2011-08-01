@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html> 
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<title>Daum 지도 API v3 예제: 기본 중심점 이동하기</title> 
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=DAUM_MAPS_DEMO_APIKEY" charset="utf-8"></script> 
+<script type="text/javascript"> 
+	var map;
+	function init() {
+		map = new daum.maps.Map(document.getElementById('map'), {
+			center: new daum.maps.LatLng(37.537123, 127.005523),
+			level: 3
+		});		
+	}
+
+	function setCenter() {
+		map.setCenter(new daum.maps.LatLng(37.53723910162246, 127.003362714821));
+	}
+	
+	function panTo() {
+		map.panTo(new daum.maps.LatLng(37.53730198471141, 127.00744728571883));
+	}
+</script> 
+</head> 
+<body onload="init()"> 
+	<div id="map" style="width:600px;height:600px;"></div>
+	<form>
+		<button type="button" onclick="setCenter()">중심점 이동하기</button>
+
+		<button type="button" onclick="panTo()">중심점 부드럽게 이동하기</button>
+	</form> 
+</body> 
+</html> 

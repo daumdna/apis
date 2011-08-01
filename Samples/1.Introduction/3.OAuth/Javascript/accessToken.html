@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title> Get Access Token</title>
+	<script type="text/javascript" src="js/sha1.js"></script>
+	<script type="text/javascript" src="js/oauth.js"></script>
+	<script type="text/javascript" >
+		
+		function getAccessToken() {
+			
+			var message = {
+				action: "https://apis.daum.net/oauth/accessToken",
+				method: "GET",
+				parameters: {
+					oauth_consumer_key: "12ccdd1d-bd04-4885-85ac-262961d4669c",
+					oauth_signature_method: "HMAC-SHA1",
+					oauth_token: document.getElementById("request-token").value,
+					oauth_verifier: document.getElementById("verifier").value,
+					oauth_callback: "http://blog.daum.net/bt088"
+				}
+			};
+
+			OAuth.setTimestampAndNonce(message);
+			OAuth.SignatureMethod.sign(message, {
+				consumerSecret: "l3fx8q3TNSgZuhcf4J4ReuVf6vMNwIZIkxUkSgrf2JSF.Bq4zsZ_vA00",
+				tokenSecret : document.getElementById("request-secret").value
+				});
+			
+			var params = [];
+
+			for(var name in message.parameters) {
+				params.push(name + "=" + 
+				encodeURIComponent(message.parameters[name]));
+
+				//http://apis.daum.net/oauth/requestToeken?name=value&name=value
+			}
+
+			var url = message.action + "?" + params.join("&");
+
+			window.location = url;
+		}
+
+
+	</script>		
+
+</head>
+<body>
+	request-token : <input type="text" id="request-token" /><br>
+	request-secret : <input type="text" id="request-secret" /><br>
+	verifier : <input type="text" id="verifier" /><br>
+	<br>
+	<button onclick="getAccessToken()"> Get Request Token </button>
+</body>
+</html>

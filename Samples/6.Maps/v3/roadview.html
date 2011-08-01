@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Daum 지도 API v3 예제: 로드뷰 기본 생성하기</title> 
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=DAUM_MAPS_DEMO_APIKEY" charset="utf-8"></script>
+<script type="text/javascript">
+	function init() {
+		var p = new daum.maps.LatLng(37.53729488297613, 127.00551022687515);
+		var rc = new daum.maps.RoadviewClient();
+		var rv = new daum.maps.Roadview(document.getElementById("roadview"));
+
+		rc.getNearestPanoId(p, 50, function(panoid) {
+			rv.setPanoId(panoid);
+		});
+		
+	}
+</script>
+</head>
+<body onload="init()">
+	<div id="roadview" style="width:600px;height:400px;"></div>
+</body>
+</html>

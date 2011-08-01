@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Daum 지도 API v3 예제: 이벤트 이용하기</title> 
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=DAUM_MAPS_DEMO_APIKEY" charset="utf-8"></script>
+<script type="text/javascript">
+	var map;
+	function init() {
+		map = new daum.maps.Map(document.getElementById('map'), {
+			center: new daum.maps.LatLng(37.537123, 127.005523),
+			level: 3
+		});
+		daum.maps.event.addListener(map,"dragend",function(){
+			var center = map.getCenter();
+			document.getElementById("message").innerHTML = "latitude : " + center.getLat() + "<br />longitude: " + center.getLng();
+		});
+	}
+</script>
+</head>
+<body onload="init()">
+	<div id="map" style="width:600px;height:400px;"></div>
+	<div id="message" style="font-size:12px;width:590px;height:30px;border:solid 1px black;padding:5px;"></div>
+</body>
+
+</html>

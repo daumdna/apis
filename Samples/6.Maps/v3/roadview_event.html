@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Daum 지도 API v3 예제: 로드뷰 이벤트 생성하기</title> 
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=DAUM_MAPS_DEMO_APIKEY" charset="utf-8"></script>
+<script type="text/javascript">
+	function init() {
+		rv = new daum.maps.Roadview(document.getElementById("roadview"));
+		rv.setPanoId(1015914343);
+		daum.maps.event.addListener(rv,"position_changed",function() {
+			alert(rv.getPosition());
+		});
+	}
+</script>
+</head>
+<body onload="init()">
+	<div id="roadview" style="width:600px;height:400px;"></div>
+</body>
+</html>
