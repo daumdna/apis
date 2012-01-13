@@ -44,8 +44,10 @@ namespace Daum.Dna.OpenApi.Oauth.Test.Console
             DevDefined.OAuth.Framework.IToken accessToken = session.ExchangeRequestTokenForAccessToken(requestToken);
 
             // '요즘 가입여부 확인하기' API를 통해 인증 확인하기
-            System.Console.WriteLine("OAuth를 통한 인증으로 '요즘 가입여부 확인하기'를 테스트합니다.");
-            string responseText = session.Request().Get().ForUrl("https://apis.daum.net/yozm/v1_0/user/joined.xml?").ToString();
+            System.Console.WriteLine("OAuth를 통한 인증으로 '요즘 글쓰기'를 테스트합니다.");
+            ConsumerRequest cr = session.Request().Post().ForUrl("https://apis.daum.net/yozm/v1_0/message/add.xml");
+            cr = cr.WithFormParameters(new Dictionary<string, string>() { { "message", System.Web.HttpUtility.UrlEncode("%$가나다^$%^%$^RTY<><><><><") } });
+            string responseText = cr.ToString();
 
             System.Console.WriteLine(responseText);
             System.Console.ReadLine();
