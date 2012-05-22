@@ -1,0 +1,239 @@
+TWebViewSample
+v7
+r0
+t359358043.348841
+cCheck dependencies
+cProcessInfoPlistFile /Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app/Info.plist WebViewSample-Info.plist
+cCompileXIB /Users/SeungChul/Project/WebViewSample/MainWindow.xib
+cCompileXIB /Users/SeungChul/Project/WebViewSample/WebViewSampleViewController.xib
+cProcessPCH /var/folders/Vh/VhV9GAj3GiWH4mVayokHGk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WebViewSample_Prefix-fijxolvgmwqfpleoxjwdmuvbnxax/WebViewSample_Prefix.pch.gch WebViewSample_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/main.o /Users/SeungChul/Project/WebViewSample/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/WebViewSampleAppDelegate.o /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/WebViewSampleViewController.o /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk
+c000000004C62535C0000000000000132
+t1281512284
+s306
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004BFDFE39000000000027C7D0
+t1274936889
+s2607056
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004BFDFE7C000000000029D5D0
+t1274936956
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004BFDFE6E0000000000001466
+t1274936942
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004C0470BB00000000000009CD
+t1275359419
+s2509
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004C0471620000000001D47210
+t1275359586
+s30700048
+
+N/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleAppDelegate.h
+c000000004FBB237200000000000001F9
+t1337664370
+s505
+i<UIKit/UIKit.h>
+
+N/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleAppDelegate.m
+c000000004FBB23720000000000000A9F
+t1337664370
+s2719
+i"WebViewSampleAppDelegate.h"
+i"WebViewSampleViewController.h"
+
+N/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.h
+c000000004FBB24840000000000000143
+t1337664644
+s323
+i<UIKit/UIKit.h>
+
+N/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.m
+c000000004FBB26D4000000000000066B
+t1337665236
+s1643
+i"WebViewSampleViewController.h"
+
+N/Users/SeungChul/Project/WebViewSample/MainWindow.xib
+c000000004FBB23720000000000004E71
+t1337664370
+s20081
+
+N/Users/SeungChul/Project/WebViewSample/WebViewSampleViewController.xib
+c000000004FBB24180000000000004017
+t1337664536
+s16407
+
+N/Users/SeungChul/Project/WebViewSample/WebViewSample_Prefix.pch
+c000000004FBB237200000000000000C3
+t1337664370
+s195
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app
+t2
+s0
+
+N/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app.dSYM
+t2
+s0
+
+N/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app/Info.plist
+t1337665240
+s615
+
+N/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app/MainWindow.nib
+t1337665240
+s1135
+
+N/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app/PkgInfo
+t1337665240
+s8
+
+N/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app/WebViewSample
+t2
+s0
+
+N/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app/WebViewSampleViewController.nib
+t1337665240
+s972
+
+N/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/WebViewSample.LinkFileList
+c000000004FBB26D800000000000001BD
+t1337665240
+s445
+
+N/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/WebViewSampleAppDelegate.o
+t2
+s0
+
+N/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/WebViewSampleViewController.o
+t2
+s0
+
+N/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/main.o
+t1337665243
+s6304
+
+N/Users/SeungChul/Project/WebViewSample/main.m
+c000000004FBB23720000000000000165
+t1337664370
+s357
+i<UIKit/UIKit.h>
+
+N/var/folders/Vh/VhV9GAj3GiWH4mVayokHGk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WebViewSample_Prefix-fijxolvgmwqfpleoxjwdmuvbnxax/WebViewSample_Prefix.pch.gch
+t1337665242
+s15232016
+
+NWebViewSample-Info.plist
+c000000004FBB2372000000000000038D
+t1337664370
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies359358040#359358040#0(0"0(0#1#0"32651513917735028#0"0#
+
+CCompileC build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/WebViewSampleAppDelegate.o /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s359358043.139115
+e359358043.250378
+r0
+xCompileC
+xbuild/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/WebViewSampleAppDelegate.o
+x/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleAppDelegate.m:10:
+o/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.h:15: error: expected specifier-qualifier-list before '*' token
+lSLF07#2@81"Compile /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleAppDelegate.m359358043#359358043#0(239"In file included from /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleAppDelegate.m:10:/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.h:15: error: expected specifier-qualifier-list before '*' token1(4@50"Expected specifier-qualifier-list before '*' token359358043#100#139#2(7@95"In file included from /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleAppDelegate.m359358043#18446744073709551615#0#0(6@73"/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleAppDelegate.m359357170#10#0#10#0#0"0(13@130"Expected specifier-qualifier-list before '*' token in /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.h359358043#18446744073709551615#0#0(6@76"/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.h359357444#15#0#15#0#0"0(6@76"/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.h359357444#15#0#15#0#19"expected * before *0(0#0#73"/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleAppDelegate.m8613089280#2069"    cd /Users/SeungChul/Project/WebViewSample    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-generated-files.hmap -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-own-target-headers.hmap -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-all-target-headers.hmap -iquote /Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-project-headers.hmap -F/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator -I/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/include -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/DerivedSources/i386 -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/DerivedSources -include /var/folders/Vh/VhV9GAj3GiWH4mVayokHGk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WebViewSample_Prefix-fijxolvgmwqfpleoxjwdmuvbnxax/WebViewSample_Prefix.pch -c /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleAppDelegate.m -o /Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/WebViewSampleAppDelegate.o1#
+
+CCompileC build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/WebViewSampleViewController.o /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s359358043.229401
+e359358043.348599
+r0
+xCompileC
+xbuild/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/WebViewSampleViewController.o
+x/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.m:9:
+o/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.h:15: error: expected specifier-qualifier-list before '*' token
+lSLF07#2@84"Compile /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.m359358043#359358043#0(241"In file included from /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.m:9:/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.h:15: error: expected specifier-qualifier-list before '*' token1(4@50"Expected specifier-qualifier-list before '*' token359358043#102#139#2(7@98"In file included from /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.m359358043#18446744073709551615#0#0(6@76"/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.m359358036#9#0#9#0#0"0(13@130"Expected specifier-qualifier-list before '*' token in /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.h359358043#18446744073709551615#0#0(6@76"/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.h359357444#15#0#15#0#0"0(6@76"/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.h359357444#15#0#15#0#19"expected * before *0(0#0#76"/Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.m8611446432#2075"    cd /Users/SeungChul/Project/WebViewSample    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-generated-files.hmap -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-own-target-headers.hmap -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-all-target-headers.hmap -iquote /Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-project-headers.hmap -F/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator -I/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/include -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/DerivedSources/i386 -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/DerivedSources -include /var/folders/Vh/VhV9GAj3GiWH4mVayokHGk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WebViewSample_Prefix-fijxolvgmwqfpleoxjwdmuvbnxax/WebViewSample_Prefix.pch -c /Users/SeungChul/Project/WebViewSample/Classes/WebViewSampleViewController.m -o /Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/WebViewSampleViewController.o1#
+
+CCompileC build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/main.o /Users/SeungChul/Project/WebViewSample/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s359358043.137309
+e359358043.229293
+r1
+xCompileC
+xbuild/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/main.o
+x/Users/SeungChul/Project/WebViewSample/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@53"Compile /Users/SeungChul/Project/WebViewSample/main.m359358043#359358043#0(0"0(0#0#45"/Users/SeungChul/Project/WebViewSample/main.m8614676928#2021"    cd /Users/SeungChul/Project/WebViewSample    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-generated-files.hmap -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-own-target-headers.hmap -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-all-target-headers.hmap -iquote /Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-project-headers.hmap -F/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator -I/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/include -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/DerivedSources/i386 -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/DerivedSources -include /var/folders/Vh/VhV9GAj3GiWH4mVayokHGk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WebViewSample_Prefix-fijxolvgmwqfpleoxjwdmuvbnxax/WebViewSample_Prefix.pch -c /Users/SeungChul/Project/WebViewSample/main.m -o /Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/SeungChul/Project/WebViewSample/MainWindow.xib
+s359358040.142775
+e359358040.941641
+r1
+xCompileXIB
+x/Users/SeungChul/Project/WebViewSample/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib359358040#359358040#0(0"0(0#0#53"/Users/SeungChul/Project/WebViewSample/MainWindow.xib29555241928228964#576"    cd /Users/SeungChul/Project/WebViewSample    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app/MainWindow.nib /Users/SeungChul/Project/WebViewSample/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
+
+CCompileXIB /Users/SeungChul/Project/WebViewSample/WebViewSampleViewController.xib
+s359358040.151678
+e359358040.977103
+r1
+xCompileXIB
+x/Users/SeungChul/Project/WebViewSample/WebViewSampleViewController.xib
+lSLF07#2@42"CompileXIB WebViewSampleViewController.xib359358040#359358040#0(0"0(0#0#70"/Users/SeungChul/Project/WebViewSample/WebViewSampleViewController.xib8613940736#610"    cd /Users/SeungChul/Project/WebViewSample    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app/WebViewSampleViewController.nib /Users/SeungChul/Project/WebViewSample/WebViewSampleViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
+
+CGenerateDSYMFile /Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app.dSYM /Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app/WebViewSample
+r0
+
+CLd /Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app/WebViewSample normal i386
+r0
+
+CProcessInfoPlistFile /Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app/Info.plist WebViewSample-Info.plist
+s359358040.120297
+e359358040.142671
+r1
+xProcessInfoPlistFile
+x/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app/Info.plist
+xWebViewSample-Info.plist
+lSLF07#2@32"Process WebViewSample-Info.plist359358040#359358040#0(0"0(0#0#63"/Users/SeungChul/Project/WebViewSample/WebViewSample-Info.plist31244169098821736#497"    cd /Users/SeungChul/Project/WebViewSample    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility WebViewSample-Info.plist -genpkginfo /Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app/Info.plist0#
+
+CProcessPCH /var/folders/Vh/VhV9GAj3GiWH4mVayokHGk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WebViewSample_Prefix-fijxolvgmwqfpleoxjwdmuvbnxax/WebViewSample_Prefix.pch.gch WebViewSample_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s359358040.977268
+e359358043.136957
+r1
+xProcessPCH
+x/var/folders/Vh/VhV9GAj3GiWH4mVayokHGk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WebViewSample_Prefix-fijxolvgmwqfpleoxjwdmuvbnxax/WebViewSample_Prefix.pch.gch
+xWebViewSample_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@35"Precompile WebViewSample_Prefix.pch359358040#359358043#0(0"0(0#0#63"/Users/SeungChul/Project/WebViewSample/WebViewSample_Prefix.pch8614640416#1907"    cd /Users/SeungChul/Project/WebViewSample    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-generated-files.hmap -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-own-target-headers.hmap -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-all-target-headers.hmap -iquote /Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/WebViewSample-project-headers.hmap -F/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator -I/Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/include -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/DerivedSources/i386 -I/Users/SeungChul/Project/WebViewSample/build/WebViewSample.build/Debug-iphonesimulator/WebViewSample.build/DerivedSources -c /Users/SeungChul/Project/WebViewSample/WebViewSample_Prefix.pch -o /var/folders/Vh/VhV9GAj3GiWH4mVayokHGk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WebViewSample_Prefix-fijxolvgmwqfpleoxjwdmuvbnxax/WebViewSample_Prefix.pch.gch0#
+
+CTouch /Users/SeungChul/Project/WebViewSample/build/Debug-iphonesimulator/WebViewSample.app
+r0
+
