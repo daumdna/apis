@@ -1,19 +1,19 @@
 <?php
-// Request Token ¿äÃ» ÁÖ¼Ò
-$request_token_Url = 'https://apis.daum.net/oauth/requestToken';
-// »ç¿ëÀÚ ÀÎÁõ URL
+// Request Token ï¿½ï¿½Ã» ï¿½Ö¼ï¿½
+$request_token_url = 'https://apis.daum.net/oauth/requestToken';
+// ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ URL
 $authorize_url = 'https://apis.daum.net/oauth/authorize';
 // Access Token URL
 $access_token_url = 'https://apis.daum.net/oauth/accessToken';
 
-// Consumer Á¤º¸ (Consumer¸¦ µî·ÏÇÏ¸é ¾ò¾î¿Ã ¼ö ÀÖÀ½.)
-$consumer_key = "[Consumer µî·ÏÀ» ÇÑ ÈÄ °¢ÀÚ ³ÖÀ¸¼¼¿ä.]";
-$consumer_secret = "[Consumer µî·ÏÀ» ÇÑ ÈÄ °¢ÀÚ ³ÖÀ¸¼¼¿ä.]";
-$callback_url = "[Consumer µî·ÏÀ» ÇÑ ÈÄ °¢ÀÚ ³ÖÀ¸¼¼¿ä.]";
+// Consumer ï¿½ï¿½ï¿½ (Consumerï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½.)
+$consumer_key = "[Consumer ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.]";
+$consumer_secret = "[Consumer ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.]";
+$callback_url = "[Consumer ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.]";
 
-// API prefix (º¸È£µÈ ÀÚ¿øÀÌ ÀÖ´Â URLÀÇ prefix)
+// API prefix (ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ URLï¿½ï¿½ prefix)
 $api_url = 'https://apis.daum.net';
 
-// Service Provider¿Í Åë½ÅÇÒ ÀÎÅÍÆäÀÌ½º¸¦ °®°í ÀÖ´Â °´Ã¼ »ý¼º.
+// Service Providerï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½.
 $oauth = new OAuth($consumer_key, $consumer_secret, OAUTH_SIG_METHOD_HMACSHA1, OAUTH_AUTH_TYPE_URI);
 ?>
