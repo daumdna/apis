@@ -4,14 +4,14 @@ require "config.php";
 session_start();
 if($_GET['oauth_verifier'] ) {
 	try {
-		// Request Token°ú verifier·Î Access Token ¾ò±â
+		// Request Token¿ verifier¿ Access Token ¿¿
 		$oauth->setToken($_GET['oauth_token'],$_SESSION["request_token_secret"]);
 		$access_token_info = $oauth->getAccessToken($access_token_url, null, $_GET['oauth_verifier']);
 
-		// Access TokenÀ¸·Î ±³È¯ µÇ¾úÀ¸¹Ç·Î Request Token »èÁ¦.
+		// Access Token¿¿ ¿¿¿¿¿¿¿ Request Token ¿¿.
 		unset($_SESSION["request_token_secret"]);
-		
-		// Access TokenÀ» ¼¼¼Ç¿¡ ÀúÀå
+
+		// Access Token¿ ¿¿¿ ¿¿
 		$_SESSION['access_token'] = $access_token_info['oauth_token'];
 		$_SESSION['access_token_secret'] = $access_token_info['oauth_token_secret'];
 	} catch(OAuthException $E) {
@@ -19,6 +19,6 @@ if($_GET['oauth_verifier'] ) {
 		exit;
 	}
 }
-// protected resource°¡ ÀÖ´Â ÆäÀÌÁö·Î
+// protected resoure¿ ¿¿ ¿¿¿¿
 header("Location: ./index.php");
 ?>

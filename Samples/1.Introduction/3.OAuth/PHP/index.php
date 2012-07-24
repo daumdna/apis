@@ -4,17 +4,17 @@ require "config.php";
 
 session_start();
 
-// access_tokenÀÌ ¹ß±ÞµÈ »óÅÂ°¡ ¾Æ´Ï¶ó¸é, OAuth ÀÎÁõ ÀýÂ÷ ½ÃÀÛ
+// access_tokenì´ ë°œê¸‰ëœ ìƒíƒœê°€ ì•„ë‹ˆë¼ë©´, OAuth ì¸ì¦ ì ˆì°¨ ì‹œìž‘
 if(!$_SESSION['access_token'] ) {
 
 	try {
-		// Request Token ¿äÃ»
+		// Request Token ìš”ì²­
 		$request_token_info = $oauth->getRequestToken($request_token_url, $callback_url);
 
-		// ¾ò¾î¿Â Request TokenÀ» ÀÌÈÄ Access Token°ú ±³È¯ÇÏ±â À§ÇØ session¿¡ ÀúÀå.
+		// ì–»ì–´ì˜¨ Request Tokenì„ Access Tokenê³¼ êµí™˜í•˜ê¸° ìœ„í•´ sessionì— ì €ìž¥
 		$_SESSION["request_token_secret"] = $request_token_info["oauth_token_secret"];
 
-		// »ç¿ëÀÚ ÀÎÁõ URL·Î redirect
+		// ì‚¬ìš©ìž ì¸ì¦ URLë¡œ redirect
 		header('Location: '.$authorize_url.'?oauth_token='.$request_token_info['oauth_token']);
 		exit;
 	} catch(OAuthException $E) {
@@ -22,7 +22,7 @@ if(!$_SESSION['access_token'] ) {
 		exit;
 	}
 } else {
-// Access TokenÀÌ ÀÌ¹Ì ¹ß±Þ µÇ¾î ÀÖ´Â »óÅÂ¸é, ÅäÅ« ÁöÁ¤
+// Access Tokenì´ ì´ë¯¸ ë°œê¸‰ë˜ì–´ ìžˆëŠ” ìƒíƒœë©´, í† í° ì§€ì •
 	$oauth->setToken($_SESSION['access_token'],$_SESSION['access_token_secret']);
 	$oauth->fetch($api_url."/calendar/category/index.xml");
 	$xml = simplexml_load_string($oauth->getLastResponse());

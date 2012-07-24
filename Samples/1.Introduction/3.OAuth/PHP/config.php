@@ -1,19 +1,19 @@
 <?php
-// Request Token ¿äÃ» ÁÖ¼Ò
+// Request Token URL
 $request_token_url = 'https://apis.daum.net/oauth/requestToken';
-// »ç¿ëÀÚ ÀÎÁõ URL
+// ì‚¬ìš©ìž ì¸ì¦ URL
 $authorize_url = 'https://apis.daum.net/oauth/authorize';
 // Access Token URL
 $access_token_url = 'https://apis.daum.net/oauth/accessToken';
 
-// Consumer Á¤º¸ (Consumer¸¦ µî·ÏÇÏ¸é ¾ò¾î¿Ã ¼ö ÀÖÀ½.)
-$consumer_key = "[Consumer µî·ÏÀ» ÇÑ ÈÄ °¢ÀÚ ³ÖÀ¸¼¼¿ä.]";
-$consumer_secret = "[Consumer µî·ÏÀ» ÇÑ ÈÄ °¢ÀÚ ³ÖÀ¸¼¼¿ä.]";
-$callback_url = "[Consumer µî·ÏÀ» ÇÑ ÈÄ °¢ÀÚ ³ÖÀ¸¼¼¿ä.]";
+// Consumer ì •ë³´ (Consumerë¥¼ ë“±ë¡í•˜ë©´ ì–»ì–´ì˜¬ ìˆ˜ ìžˆìŒ.)
+$consumer_key = "[Consumer Â¿Â¿Â¿ Â¿ Â¿ Â¿Â¿ Â¿Â¿Â¿Â¿.]";
+$consumer_secret = "[Consumer Â¿Â¿Â¿ Â¿ Â¿ Â¿Â¿ Â¿Â¿Â¿Â¿.]";
+$callback_url = "[Consumer Â¿Â¿Â¿ Â¿ Â¿ Â¿Â¿ Â¿Â¿Â¿Â¿.]";
 
-// API prefix (º¸È£µÈ ÀÚ¿øÀÌ ÀÖ´Â URLÀÇ prefix)
+// API prefix (ë³´í˜¸ëœ ìžì›ì´ ìžˆëŠ” URLì˜ prefix)
 $api_url = 'https://apis.daum.net';
 
-// Service Provider¿Í Åë½ÅÇÒ ÀÎÅÍÆäÀÌ½º¸¦ °®°í ÀÖ´Â °´Ã¼ »ý¼º.
+// Service Providerì™€ í†µì‹ í•  ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ ê°–ê³  ìžˆëŠ” ê°ì²´ ìƒì„±.
 $oauth = new OAuth($consumer_key, $consumer_secret, OAUTH_SIG_METHOD_HMACSHA1, OAUTH_AUTH_TYPE_URI);
 ?>
