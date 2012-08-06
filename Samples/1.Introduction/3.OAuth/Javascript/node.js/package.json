@@ -1,0 +1,12 @@
+{
+  "name": "oauth-console-example",
+  "description": "oauth console example for node.js",
+  "version": "0.1.0",
+  "dependencies": {
+    "read": "1.0.2",
+    "oauth": ""	
+  },
+  "engines": {
+    "node": ">=0.8"
+  }
+}
