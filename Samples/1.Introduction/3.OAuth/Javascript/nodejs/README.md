@@ -15,7 +15,7 @@
 
 실행하기:
     
-    node app.js
+    node oauth_console.js
 
 # 튜토리얼
 ---
