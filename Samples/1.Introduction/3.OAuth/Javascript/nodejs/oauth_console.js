@@ -3,13 +3,12 @@ var config = require('./config').config,
 	read = require('read');
 
 // Service Provider와 통신할 인터페이스를 갖고 있는 객체 생성.
-var oauth = new OAuth(
-            config.requestTokenUrl, config.accessTokenUrl, 
-            config.consumerKey, config.consumerSecret,
-            "1.0", config.callbackUrl, "HMAC-SHA1");
+var oauth = new OAuth(config.requestTokenUrl, config.accessTokenUrl,
+	config.consumerKey, config.consumerSecret,
+	"1.0", config.callbackUrl, "HMAC-SHA1");
 
-	// 2. Request Token 요청
-	oauth.getOAuthRequestToken(function(err, requestToken, requestTokenSecret, results) {
+// 2. Request Token 요청
+oauth.getOAuthRequestToken(function(err, requestToken, requestTokenSecret, results) {
 	if (err) {
 		console.log(err);
 	} else {
@@ -26,27 +25,27 @@ var oauth = new OAuth(
 
 				// 5. Request Token을 AccessToken 으로 교환
 				oauth.getOAuthAccessToken(requestToken, requestTokenSecret, verifier, function(err, accessToken, accessTokenSecret, result) {
-				  if (err) {
-				    console.log(err);
-				  } else {
+					if (err) {
+						console.log(err);
+					} else {
 
 						console.log("Access Token = " + accessToken);
 						console.log("Access Token Secret = " + accessTokenSecret);
 
-					 	// 6. 보호된 자원에 접근
+						// 6. 보호된 자원에 접근
 						var resourceUrl = config.apiUrl + "/calendar/category/index.json";
 						oauth.get(resourceUrl, accessToken, accessTokenSecret, function(err, data, res) {
 							if(err) {
-							  	console.log(err);
-						  } else {
-						  	categories = eval(data);
+								console.log(err);
+							} else {
+								categories = eval(data);
 
 								for(var i = 0; i < categories.length; i++) {
-						  		console.log(categories[i].name);
-						  	}
-						 	}
+									console.log(categories[i].name);
+								}
+							}
 						});
-				 	}
+					}
 				});
 			}
 		});
