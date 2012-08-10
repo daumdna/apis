@@ -30,10 +30,10 @@ OAuth 기본 튜토리얼 for Node.js
 이제 직접 코딩을 해보도록 하겠습니다. OAuth 인증을 통한 보호된 자원을 얻는 절차는 아래와 같고, 그 순서에 따라 코드를 작성해 보겠습니다.
 
 1. URL 및 Consumer 정보 설정
-2. *Request Token 요청*
-3. *사용자 인증(Authentication) 및 권한 위임(Authorization)*
+2. **Request Token 요청**
+3. **사용자 인증(Authentication) 및 권한 위임(Authorization)**
 4. Verifier(인증코드) 입력받기
-5. *Request Token을 Access Token으로 교환*
+5. **Request Token을 Access Token으로 교환**
 6. Access Token을 싣고 API 호출하면, 보호된 자원으로 접근
 
 OAuth에서는 3가지 중요한 URL이 있는데, Daum OAuth에서는 아래와 같은 URL을 사용합니다.
@@ -116,7 +116,7 @@ OAuth에서는 3가지 중요한 URL이 있는데, Daum OAuth에서는 아래와
 
 > "OAuth 객체 생성시 OAUTH_SIG_METHOD_HMACSHA1 이라는 것은 서명 메소드가 HMAC-SHA1이라는 것을 의미합니다. Daum OAuth는 HMAC-SHA1만 지원하므로 그냥 이렇게 사용하면 된다고 아시면 됩니다."
 
-### 2. *Request Token 요청*
+### 2. Request Token 요청
 이번에는 Service Provider에 Request Token을 요청합니다.
 
 #### app.js
@@ -130,7 +130,7 @@ OAuth에서는 3가지 중요한 URL이 있는데, Daum OAuth에서는 아래와
 
 미리 생성한 oauth객체의 메소드인 getOAuthRequestToken 호출을 통해 Request Token을 얻을 수 있습니다. 이 때 결과는 Node.js의 특성 답게 callback 함수에서 얻을 수 있습니다. 그리고 이 callback 함수 내부(중략... 이라고 된 부분)에서 계속 다음 단계로 넘어가는 형식을 취합니다.
 
-### 3. *사용자 인증(Authentication) 및 권한 위임(Authorization)*
+### 3. 사용자 인증(Authentication) 및 권한 위임(Authorization)
 
 Request Token/Secret은 이후에 Access Token으로 변경됩니다. 아래 코드와 같이 사용자 인증 URL에 token을 쿼리스트링 으로 만든 URL로 사용자가 웹브라우저에서 보도록 합니다. 지금은 콘솔 프로그램이어서 사용자가 웹브라우저에 해당 URL을 직접 붙여 넣어야 하지만, 웹프로그램이라면 그냥 redirect 시켜주면 되겠죠?
 
@@ -157,7 +157,7 @@ Request Token/Secret은 이후에 Access Token으로 변경됩니다. 아래 코
 
 > "이때, 컨슈머 등록시 서비스형태를 웹서비스로 선택했으면 지정했던 Callback URL로 넘어 갑니다. 그리고 그 Callback URL의 Query String으로 verifier(oauth_verifier)를 넘겨줍니다."
 
-### 5. *Request Token을 Access Token으로 교환*
+### 5. Request Token을 Access Token으로 교환
 
 이제 Request Token은 Access Token으로 교환하게 됩니다. 이 때 verifier(인증코드) 값과 Request Token 조합으로 Access Token을 얻어냅니다. 아래과 같은 형태로 구현이 될 수 있습니다.
 
