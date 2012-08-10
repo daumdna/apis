@@ -5,7 +5,7 @@
 ## 요구사항
 
   - [Node.js](http://nodejs.org/) 코딩 능력
-  - [OAuth의 기본적인 이해](https://dna.daum.net/apis/oauth)
+  - [OAuth의 기본적인 이해](http://dna.daum.net/apis/oauth/intro)
 
 ## 일단 실행해보기
 
