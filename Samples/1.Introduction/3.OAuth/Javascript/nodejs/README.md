@@ -66,7 +66,7 @@ OAuth에서는 3가지 중요한 URL이 있는데, Daum OAuth에서는 아래와
       accessTokenUrl: "https://apis.daum.net/oauth/accessToken",
       consumerKey: "[Consumer 등록 후 각자 입력하세요]",
       consumerSecret: "[Consumer 등록 후 각자 입력하세요]",
-      callbackUrl: "oob",
+      callbackUrl: "oob"
     }
 
     // 외부 모듈에 사용할 수 있도록 export
@@ -93,7 +93,7 @@ OAuth에서는 3가지 중요한 URL이 있는데, Daum OAuth에서는 아래와
       accessTokenUrl: "https://apis.daum.net/oauth/accessToken",
       consumerKey: "[Consumer 등록 후 각자 입력하세요]",
       consumerSecret: "[Consumer 등록 후 각자 입력하세요]",
-      callbackUrl: "oob",
+      callbackUrl: "oob"
     }
 
     // 외부 모듈에 사용할 수 있도록 export
