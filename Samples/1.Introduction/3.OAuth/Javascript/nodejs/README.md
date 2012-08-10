@@ -122,7 +122,7 @@ OAuth에서는 3가지 중요한 URL이 있는데, Daum OAuth에서는 아래와
 #### app.js
     oauth.getOAuthRequestToken(function(err, requestToken, requestTokenSecret, results) {
       if (err) {
-          console.log(err);
+        console.log(err);
       } else {
         중략...
       }
@@ -149,7 +149,7 @@ Request Token/Secret은 이후에 Access Token으로 변경됩니다. 아래 코
     // 4. verifier 입력 받기
     read({prompt: "verifier: "}, function(err, verifier) {
       if(err) {
-      console.log(err);
+        console.log(err);
       } else {
         중략...
       }
@@ -165,7 +165,7 @@ Request Token/Secret은 이후에 Access Token으로 변경됩니다. 아래 코
     // 5. Request Token을 AccessToken 으로 교환
     oauth.getOAuthAccessToken(requestToken, requestTokenSecret, verifier, function(err, accessToken, accessTokenSecret, result) {
       if (err) {
-      console.log(err);
+        console.log(err);
       } else {
   
         console.log("Access Token = " + accessToken);
@@ -197,7 +197,7 @@ Request Token/Secret은 이후에 Access Token으로 변경됩니다. 아래 코
         for(var i = 0; i &lt; categories.length; i++) {
           console.log(categories[i].name);
         }
-     }
+      }
     });
 
 이렇게 해서 우리는 OAuth 인증 기반으로 Access Token을 발급 받고, API를 호출해서 보호된 자원을 얻어오는 일까지 모두 성공했습니다.
