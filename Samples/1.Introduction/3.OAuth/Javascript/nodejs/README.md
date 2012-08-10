@@ -1,6 +1,11 @@
 OAuth 기본 튜토리얼 for Node.js
 ===
 
+### 요구사항
+
+  - [Node.js](http://nodejs.org/) 코딩 능력
+  - [OAuth의 기본적인 이해](https://dna.daum.net/apis/oauth)
+
 ### 시작하기
 
 관련 모듈 설치:
