@@ -64,8 +64,8 @@ OAuth에서는 3가지 중요한 URL이 있는데, Daum OAuth에서는 아래와
       requestTokenUrl: "https://apis.daum.net/oauth/requestToken",
       authorizeUrl: "https://apis.daum.net/oauth/authorize",
       accessTokenUrl: "https://apis.daum.net/oauth/accessToken",
-      consumerKey: "[컨슈머 등록 후 ]",
-      consumerSecret: "Ps5fbgtu6SxGfYJGwt_6jilpKfMoTFtXKhTq_BPoiEYaDyqhROn2nA00",
+      consumerKey: "[Consumer 등록 후 각자 입력하세요]",
+      consumerSecret: "[Consumer 등록 후 각자 입력하세요]",
       callbackUrl: "oob",
     }
 
@@ -91,8 +91,8 @@ OAuth에서는 3가지 중요한 URL이 있는데, Daum OAuth에서는 아래와
       requestTokenUrl: "https://apis.daum.net/oauth/requestToken",
       authorizeUrl: "https://apis.daum.net/oauth/authorize",
       accessTokenUrl: "https://apis.daum.net/oauth/accessToken",
-      consumerKey: "[컨슈머 등록 후 ]",
-      consumerSecret: "Ps5fbgtu6SxGfYJGwt_6jilpKfMoTFtXKhTq_BPoiEYaDyqhROn2nA00",
+      consumerKey: "[Consumer 등록 후 각자 입력하세요]",
+      consumerSecret: "[Consumer 등록 후 각자 입력하세요]",
       callbackUrl: "oob",
     }
 
