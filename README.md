@@ -1,27 +1,27 @@
-Daum ¿ÀÇÂ API »ùÇÃ ÄÚµå
+Daum ì˜¤í”ˆ API ìƒ˜í”Œ ì½”ë“œ
 =======================
 
-º» »ùÇÃ ÄÚµå´Â Daum ¿ÀÇÂ API¸¦ È°¿ëÇÏ´Âµ¥ ÇÊ¿äÇÑ ´Ù¾çÇÑ ¾ð¾îº° ¿¹Á¦¸¦ ¸ð¾Æ ³õ¾Ò½À´Ï´Ù. API º°·Î È°¿ëÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.
+ë³¸ ìƒ˜í”Œ ì½”ë“œëŠ” Daum ì˜¤í”ˆ APIë¥¼ í™œìš©í•˜ëŠ”ë° í•„ìš”í•œ ë‹¤ì–‘í•œ ì–¸ì–´ë³„ ì˜ˆì œë¥¼ ëª¨ì•„ ë†“ì•˜ìŠµë‹ˆë‹¤. API ë³„ë¡œ í™œìš©í•˜ì‹¤ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 
-**»ùÇÃ ÄÚµå¿¡ ´ëÇÑ Ãß°¡ ¹× ¼öÁ¤ Âü¿©¸¦ È¯¿µÇÕ´Ï´Ù!**
+**ìƒ˜í”Œ ì½”ë“œì— ëŒ€í•œ ì¶”ê°€ ë° ìˆ˜ì • ì°¸ì—¬ë¥¼ í™˜ì˜í•©ë‹ˆë‹¤!**
 
-## »ç¿ë ¹æ¹ý 
-- Samples µð·ºÅä¸® ¹Ø¿¡ ´Ù¾çÇÑ ÄÚµå ¿¹Á¦µéÀÌ Æ÷ÇÔµÇ¾î ÀÖ½À´Ï´Ù.
-- »ç¿ëÇÏ·Á´Â APIÀÇ Á¾·ù¸¦ ¼±ÅÃÇÏ¸é, ¾Æ·¡¿¡ ¾ð¾îº° ¿¹Á¦¸¦ Ã£À» ¼ö ÀÖ½À´Ï´Ù. 
-- PHP, Python, Java, DotNet, Ruby µîÀÇ »ùÇÃ ÄÚµå°¡ ÀÖÀ¸¸ç, Daum API´Â json/callbackÀ» Áö¿øÇÏ±â ¶§¹®¿¡ Javascript·Î »ç¿ëµµ °¡´ÉÇÕ´Ï´Ù.
+## ì‚¬ìš© ë°©ë²• 
+- Samples ë””ë ‰í† ë¦¬ ë°‘ì— ë‹¤ì–‘í•œ ì½”ë“œ ì˜ˆì œë“¤ì´ í¬í•¨ë˜ì–´ ìžˆìŠµë‹ˆë‹¤.
+- ì‚¬ìš©í•˜ë ¤ëŠ” APIì˜ ì¢…ë¥˜ë¥¼ ì„ íƒí•˜ë©´, ì•„ëž˜ì— ì–¸ì–´ë³„ ì˜ˆì œë¥¼ ì°¾ì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤. 
+- PHP, Python, Java, DotNet, Ruby ë“±ì˜ ìƒ˜í”Œ ì½”ë“œê°€ ìžˆìœ¼ë©°, Daum APIëŠ” json/callbackì„ ì§€ì›í•˜ê¸° ë•Œë¬¸ì— Javascriptë¡œ ì‚¬ìš©ë„ ê°€ëŠ¥í•©ë‹ˆë‹¤.
 
-## µð·ºÅä¸® ¼Ò°³
-1. Introduction: REST ¿äÃ» ¹× ÀÀ´ä, OAuth »ùÇÃ ÄÚµå
-2. Search: °Ë»ö APIÀÇ ¿äÃ» ¹× ÀÀ´ä, json/callback ¿¹Á¦ 
-3. Calendar: PHP, PythonÀ» ÀÌ¿ëÇÑ Ä¶¸°´õ »ùÇÃ ¿¹Á¦ ¼­ºñ½º
-4. Cafe: PHP, Python, ´å³Ý, ÀÚ¹Ù¸¦ È°¿ëÇÑ Ä«Æä API È°¿ë ÄÚµå
-5. Yozm: ¿äÁò ¼­ºñ½º¿ë ´å³Ý ¹× ÀÚ¹Ù ÄÚµå (2013³â 6¿ù¸» ¼­ºñ½º Á¾·á)
-6. Maps: v3 ±âÁØÀÇ Áöµµ ±â´É È°¿ë ÆäÀÌÁö ¿¹Á¦(HTML/CSS/JS ÄÚµå ±â¹Ý)
-7. Blog: ºí·Î±×API¿¡¼­ ´å³Ý¿ë ÆÄÀÏ ¾÷·Îµå API ±â´É »ùÇÃ ÄÚµå 
-8. MyPeople: ¸¶ÀÌÇÇÇÃ º¿ API¸¦ È°¿ëÇÏ±â À§ÇÑ ¿¡ÄÚº¿ »ùÇÃ(PHP ¹× Node.js)
+## ë””ë ‰í† ë¦¬ ì†Œê°œ
+1. Introduction: REST ìš”ì²­ ë° ì‘ë‹µ, OAuth ìƒ˜í”Œ ì½”ë“œ
+2. Search: ê²€ìƒ‰ APIì˜ ìš”ì²­ ë° ì‘ë‹µ, json/callback ì˜ˆì œ 
+3. Calendar: PHP, Pythonì„ ì´ìš©í•œ ìº˜ë¦°ë” ìƒ˜í”Œ ì˜ˆì œ ì„œë¹„ìŠ¤
+4. Cafe: PHP, Python, ë‹·ë„·, ìžë°”ë¥¼ í™œìš©í•œ ì¹´íŽ˜ API í™œìš© ì½”ë“œ
+5. Yozm: ìš”ì¦˜ ì„œë¹„ìŠ¤ìš© ë‹·ë„· ë° ìžë°” ì½”ë“œ (2013ë…„ 6ì›”ë§ ì„œë¹„ìŠ¤ ì¢…ë£Œ)
+6. Maps: v3 ê¸°ì¤€ì˜ ì§€ë„ ê¸°ëŠ¥ í™œìš© íŽ˜ì´ì§€ ì˜ˆì œ(HTML/CSS/JS ì½”ë“œ ê¸°ë°˜)
+7. Blog: ë¸”ë¡œê·¸APIì—ì„œ ë‹·ë„·ìš© íŒŒì¼ ì—…ë¡œë“œ API ê¸°ëŠ¥ ìƒ˜í”Œ ì½”ë“œ 
+8. MyPeople: ë§ˆì´í”¼í”Œ ë´‡ APIë¥¼ í™œìš©í•˜ê¸° ìœ„í•œ ì—ì½”ë´‡ ìƒ˜í”Œ(PHP ë° Node.js)
 
-## ¹®ÀÇ »çÇ×
+## ë¬¸ì˜ ì‚¬í•­
 
-*´õ ±Ã±ÝÇÑ Á¡ÀÌ ÀÖÀ¸½Ã¸é ¾Æ·¡·Î ¹®ÀÇÇØ ÁÖ½Ê½Ã¿À*
-- °³¹ßÀÚ Æ÷·³ http://cafe.daum.net/daumdna
+*ë” ê¶ê¸ˆí•œ ì ì´ ìžˆìœ¼ì‹œë©´ ì•„ëž˜ë¡œ ë¬¸ì˜í•´ ì£¼ì‹­ì‹œì˜¤*
+- ê°œë°œìž í¬ëŸ¼ http://cafe.daum.net/daumdna
  

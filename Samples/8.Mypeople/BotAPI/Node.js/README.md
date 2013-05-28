@@ -1,13 +1,13 @@
-¸¶ÀÌÇÇÇÃ API PHP¿ë »ùÇÃ
+ï»¿ë§ˆì´í”¼í”Œ API PHPìš© ìƒ˜í”Œ
 =======================
 
-º» »ùÇÃ ÄÚµå´Â Daum ¸¶ÀÌÇÇÇÃ º¿ API¸¦ È°¿ëÇÏ´Âµ¥ ÇÊ¿äÇÑ Node.js¿ë ¿¡ÄÚº¿ÀÔ´Ï´Ù.
+ë³¸ ìƒ˜í”Œ ì½”ë“œëŠ” Daum ë§ˆì´í”¼í”Œ ë´‡ APIë¥¼ í™œìš©í•˜ëŠ”ë° í•„ìš”í•œ Node.jsìš© ì—ì½”ë´‡ìž…ë‹ˆë‹¤.
 
-**»ùÇÃ ÄÚµå¿¡ ´ëÇÑ Ãß°¡ ¹× ¼öÁ¤ Âü¿©¸¦ È¯¿µÇÕ´Ï´Ù!**
+**ìƒ˜í”Œ ì½”ë“œì— ëŒ€í•œ ì¶”ê°€ ë° ìˆ˜ì • ì°¸ì—¬ë¥¼ í™˜ì˜í•©ë‹ˆë‹¤!**
  
 
-## ¹®ÀÇ »çÇ×
+## ë¬¸ì˜ ì‚¬í•­
 
-*´õ ±Ã±ÝÇÑ Á¡ÀÌ ÀÖÀ¸½Ã¸é ¾Æ·¡·Î ¹®ÀÇÇØ ÁÖ½Ê½Ã¿À*
-- °³¹ßÀÚ Æ÷·³ http://cafe.daum.net/daumdna
+*ë” ê¶ê¸ˆí•œ ì ì´ ìžˆìœ¼ì‹œë©´ ì•„ëž˜ë¡œ ë¬¸ì˜í•´ ì£¼ì‹­ì‹œì˜¤*
+- ê°œë°œìž í¬ëŸ¼ http://cafe.daum.net/daumdna
  
