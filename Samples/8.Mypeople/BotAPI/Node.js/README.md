@@ -18,7 +18,7 @@
 ## 실행 방법
  
     npm install
-    npm start
+    node app
 
 
 ## 문의 사항
