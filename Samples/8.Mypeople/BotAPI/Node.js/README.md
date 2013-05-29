@@ -4,9 +4,6 @@
 본 샘플 코드는 Daum 마이피플 봇 API를 활용하는데 필요한 Node.js용 에코봇입니다.
 
 **샘플 코드에 대한 추가 및 수정 참여를 환영합니다!**
- 
- 
-  var bot = new Bot( "https://apis.daum.net", "MYPEOPLE_BOT_API_KEY");
 
  
 ## API 등록 방법
