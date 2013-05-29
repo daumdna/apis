@@ -1,12 +1,13 @@
 {
-  "name": "Mypeople Sample BOT",
-  "version": "0.0.1",
-  "private": true,
+  "name": "MypeopleBot",
+  "version": "0.0.2",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app"
   },
   "dependencies": {
-    "express": "3.2.5",
-    "jade": "*"
+    "express": "latest",
+    "jade": "latest",
+    "request": "latest",
+    "socket.io": "latest"
   }
 }
