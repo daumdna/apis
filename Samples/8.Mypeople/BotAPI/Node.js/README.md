@@ -7,8 +7,8 @@
 
  
 ## API 등록 방법
-* 다음(http://daum.net)에서 .bot으로 끝나는 새로운 아이디 생성 _(예: sample.bot)_
-* DAUM DNA 사이트(https://dna.daum.net/myapi/authapi/mypeople)에서 봇 등록
+* 다음( http://daum.net )에서 .bot으로 끝나는 새로운 아이디 생성 _(예: sample.bot)_
+* DAUM DNA 사이트( https://dna.daum.net/myapi/authapi/mypeople )에서 봇 등록
 
 * 알림콜백 수정
  https://github.com/daumdna/apis/blob/master/Samples/8.Mypeople/BotAPI/Node.js/app.js#L36
