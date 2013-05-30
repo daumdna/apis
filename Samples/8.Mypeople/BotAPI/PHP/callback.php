@@ -136,16 +136,15 @@ function sendMessage($target, $targetId, $msg)
 	global $API_URL_PREFIX, $API_URL_POSTFIX, $MYPEOPLE_BOT_APIKEY;
 	
 	//메시지 전송 url 지정
-	$url =  $API_URL_PREFIX."/mypeople/" .$target. "/send.xml";
+	$url =  $API_URL_PREFIX."/mypeople/" .$target. "/send.xml?apikey=" .$MYPEOPLE_BOT_APIKEY;
 	
 	//CR처리. \n 이 있을경우 에러남
-	$msg = urlencode(str_replace(array("\n",'\n'), "\r", $msg));		
+	$msg = str_replace(array("\n",'\n'), "\r", $msg);		
 	
 	//파라미터 설정
 	$postData = array();
 	$postData[$target."Id"] = $targetId;
-	$postData['content'] = $msg;	
-	$postData['apikey'] = $MYPEOPLE_BOT_APIKEY;	
+	$postData['content'] = $msg;		
 	$postVars = http_build_query($postData);
 	
 	//cURL을 이용한 POST전송
