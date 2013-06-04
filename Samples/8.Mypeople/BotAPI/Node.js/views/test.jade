@@ -1,0 +1,43 @@
+h2= title
+
+div
+  h3 1:1 대화 메시지 보내기
+  form(method='post', action='/callback')
+    input(type='hidden', name='action', value='sendFromMessage')
+    | apikey :
+    input(type='text', name='apikey', value='#{apikey}')
+    br
+    | buddyId :
+    input(type='text', name='buddyId', value='#{buddyId}')
+    br
+    | content :
+    input(type='text', name='content', value='hello')
+    br
+    input(type='submit', value='메시지 전송 실행')
+
+div
+  h3 그룹 대화 메시지 보내기
+  form(method='post', action='/callback')
+    input(type='hidden', name='action', value='sendFromGroup')
+    | apikey :
+    input(type='text', name='apikey', value='#{apikey}')
+    br
+    | groupId :
+    input(type='text', name='groupId', value='#{groupId}')
+    br
+    | content :
+    input(type='text', name='content', value='hello')
+    br
+    input(type='submit', value='메시지 전송 실행')
+
+div
+  h3 파일 다운로드
+  | 파일 저장경로는 "서버경로/mypeople/bot_data/download" 폴더 입니다
+  form(method='post', action='/callback')
+    input(type='hidden', name='action', value='download')
+    | apikey :
+    input(type='text', name='apikey', value='#{apikey}')
+    br
+    | fileId :
+    input(type='text', name='fileId', value='myp_pub:515A862A032BBB000D')
+    input(type='submit', value='파일 다운로드 실행')
