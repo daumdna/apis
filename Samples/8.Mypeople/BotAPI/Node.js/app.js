@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -22,8 +21,6 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-// 이미지 저장 폴더
-app.use("mypeople/bot_data", express.static(__dirname + '/bot_data'));
 
 // development only
 if ('development' == app.get('env')) {
@@ -31,9 +28,14 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/test', routes.test);
 
-// POST /receive - 마이피플 콜백 주소
-app.post("/receive", mypeople.receive);
+
+// 봇 데이터 폴더
+app.use("mypeople/bot_data", express.static(__dirname + '/bot_data'));
+
+// POST /callback - 마이피플 콜백 주소
+app.post("/callback", mypeople.callback );
 
 app.use("/styles", express.static(__dirname + '/public/styles'));
 http.createServer(app).listen(app.get('port'), function(){

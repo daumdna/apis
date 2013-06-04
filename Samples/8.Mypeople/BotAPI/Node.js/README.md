@@ -1,4 +1,4 @@
-﻿마이피플 API Node.js용 샘플
+﻿﻿﻿마이피플 API Node.js용 샘플
 =======================
 
 본 샘플 코드는 Daum 마이피플 봇 API를 활용하는데 필요한 Node.js용 에코봇입니다.
@@ -11,15 +11,15 @@
 * DAUM DNA 사이트( https://dna.daum.net/myapi/authapi/mypeople )에서 봇 등록
 
 * 알림콜백 수정
- https://github.com/daumdna/apis/blob/master/Samples/8.Mypeople/BotAPI/Node.js/app.js#L36
+ https://github.com/daumdna/apis/blob/master/Samples/8.Mypeople/BotAPI/Node.js/app.js#L38
 * APIKEY 수정
-  https://github.com/daumdna/apis/blob/master/Samples/8.Mypeople/BotAPI/Node.js/mypeople/receiver.js#L2
+  https://github.com/daumdna/apis/blob/master/Samples/8.Mypeople/BotAPI/Node.js/mypeople/receiver.js#L5
+
 
 ## 실행 방법
  
     npm install
     node app
-
 
 ## 문의 사항
 
