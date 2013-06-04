@@ -2,7 +2,7 @@ var Bot = require("./lib/bot");
 
 var bot = new Bot({
 	apiHost: "https://apis.daum.net", 
-	apiKey: "072cbd203a0be732f7a7a3b18c115d4a31f932ae"
+	apiKey: "MYPEOPLE_APIKEY"
 });
 
 exports.buddyTest = function(buddyId, content) {
