@@ -4,23 +4,27 @@ var req = require('request'),
 (function () {
 	'use strict';
 
-	var apiHost, apiKey;
 	var apiUrl = Array();
 
-	var Bot = module.exports = function (apiHost, apiKey) {
-		this.apiHost = apiHost;
-		this.apiKey = apiKey;
+	var Bot = module.exports = function (options) {
 
-		console.log('MyPeople BOT: ', this.apiHost, ',', this.apiKey);
+		if( options!==null && options.apiKey!=="MYPEOPLE_APIKEY" ){
+			this.apiHost = options.apiHost;
+			this.apiKey = options.apiKey;
+			console.log('MyPeople BOT: ', this.apiHost, ',', this.apiKey);
+		}else{
+			console.log('MyPeople BOT: apiKey를 설정해주세요.')
+		}
 
 		apiUrl = {
-			buddyProfile: apiHost + "/mypeople/profile/buddy.json?apikey=" + apiKey,
-			sendBuddy: apiHost + "/mypeople/buddy/send.json?apikey=" + apiKey,
-			sendGroup: apiHost + "/mypeople/group/send.json?apikey=" + apiKey,
-			members: apiHost + "/mypeople/group/members.json?apikey=" + apiKey,
-			exitGroup: apiHost + "/mypeople/group/exit.json?apikey=" + apiKey,
-			downloadFile: apiHost + "/mypeople/file/download.json?apikey=" + apiKey
+			buddyProfile: this.apiHost + "/mypeople/profile/buddy.json?apikey=" + this.apiKey,
+			sendBuddy: this.apiHost + "/mypeople/buddy/send.json?apikey=" + this.apiKey,
+			sendGroup: this.apiHost + "/mypeople/group/send.json?apikey=" + this.apiKey,
+			members: this.apiHost + "/mypeople/group/members.json?apikey=" + this.apiKey,
+			exitGroup: this.apiHost + "/mypeople/group/exit.json?apikey=" + this.apiKey,
+			downloadFile: this.apiHost + "/mypeople/file/download.json?apikey=" + this.apiKey
 		}
+
 	};
 
 	Bot.prototype = {
@@ -50,12 +54,8 @@ var req = require('request'),
 
 			} else {
 
-				req.post({
-					url: apiUrl.sendBuddy,
-					form: { 
-						buddyId: buddyId,
-						content: encodeURIComponent(content)
-					}
+				req.get({
+					uri: apiUrl.sendBuddy + "&buddyId=" + buddyId + "&content=" + encodeURIComponent(content)
 				}, this.createResponseHandler(callback));
 
 			}
@@ -68,7 +68,7 @@ var req = require('request'),
 		buddyProfile: function (buddyId, callback) {
 			req.get({
 				uri: apiUrl.buddyProfile + "&buddyId=" + buddyId
-			}, this.createResponseHandler(callback));
+			}, this.createProfileResponseHandler(callback));
 		},
 
 		/**
@@ -78,7 +78,7 @@ var req = require('request'),
 		getMembers: function (groupId, callback) {
 			req.get({
 				uri: apiUrl.members + "&groupId=" + groupId
-			}, this.createResponseHandler(callback));
+			}, this.createProfileResponseHandler(callback));
 		},
 
 		/**
@@ -107,12 +107,8 @@ var req = require('request'),
 
 			} else {
 
-				req.post({
-					url: apiUrl.sendGroup,
-					form: { 
-						groupId: groupId,
-						content: encodeURIComponent(content)
-					}
+				req.get({
+					uri: apiUrl.sendGroup + "&groupId=" + groupId + "&content=" + encodeURIComponent(content)
 				}, this.createResponseHandler(callback));
 
 			}
@@ -135,33 +131,67 @@ var req = require('request'),
 		 *      http://dna.daum.net/apis/mypeople/ref#filedownload      
 		 */
 		downloadFile: function (fileId, fileName) {
+
 			req.get({
 				uri: apiUrl.downloadFile + "&fileId=" + fileId,
 			}).pipe(fs.createWriteStream('mypeople/bot_data/download/' + fileName + '.jpg'));
+			
 		},
+
 
 		createResponseHandler: function (callback) {
 			return function (error, resp, data) {
-				
+
 				if (error) {
-					callback(error);
+					callback(error, null);
 				} else {
 					var result;
 					try {
 						result = JSON.parse(data);
-					} catch (ex) {
-						callback("JSON PARSING ERROR", null);
+					} catch (e) {
+						callback("Error : JSON Parsing", e);
 					}
 
-					if (result === "null" && parseInt(result.code, 10) >= 400) {
-						callback("ERROR CODE: " + result.code + " " + data);
+					if (parseInt(result.code, 10) > 200) {
+						callback("Error : Request\n" + resp.request.uri.href + "\n" + data, null);
 					} else {
 						callback(null, result);
 					}
 				}
+
+			};
+
+		},
+
+		createProfileResponseHandler: function (callback) {
+			return function (error, resp, data) {
+
+				if (error) {
+					callback(error, null);
+				} else {
+					var result;
+
+					try {
+						result = JSON.parse(data);
+					} catch (e) {
+						callback("Error : JSON Parsing", e);
+					}
+
+					if (parseInt(result.code, 10) > 200) {
+						callback("Error : Request\n" + resp.request.uri.href + "\n" + data, null);
+					} else {
+						if(result.buddys[0]===undefined){
+							callback("Error : Profile is undefined", null);
+						}else{
+							callback(null, result);
+						}
+					}
+				}
+
 			};
 
 		}
+
 	};
 
 })();
