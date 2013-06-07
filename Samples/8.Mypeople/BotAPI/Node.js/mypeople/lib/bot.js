@@ -152,10 +152,10 @@ var req = require('request'),
 						callback("Error : JSON Parsing", e);
 					}
 
-					if (parseInt(result.code, 10) > 200) {
-						callback("Error : Request\n" + resp.request.uri.href + "\n" + data, null);
-					} else {
+					if (parseInt(result.code, 10) === 200) {
 						callback(null, result);
+					} else {
+						callback("Error : Request\n" + resp.request.uri.href + "\n" + data, null);
 					}
 				}
 
@@ -177,14 +177,14 @@ var req = require('request'),
 						callback("Error : JSON Parsing", e);
 					}
 
-					if (parseInt(result.code, 10) > 200) {
-						callback("Error : Request\n" + resp.request.uri.href + "\n" + data, null);
-					} else {
-						if(result.buddys[0]===undefined){
+					if (parseInt(result.code, 10) === 200) {
+						if(result.buddys[0] === undefined){
 							callback("Error : Profile is undefined", null);
 						}else{
 							callback(null, result);
 						}
+					} else {
+						callback("Error : Request\n" + resp.request.uri.href + "\n" + data, null);
 					}
 				}
 
