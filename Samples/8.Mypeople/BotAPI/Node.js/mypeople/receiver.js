@@ -1,9 +1,6 @@
-var Bot = require("./lib/bot");
-
-var bot = new Bot({
-	apiHost: "https://apis.daum.net", 
-	apiKey: "MYPEOPLE_APIKEY"
-});
+var fs = require('fs');
+var Client = require('mypeople').Client;
+var client = new Client("MYPEOPLE_KEY", {server: 'https://apis.daum.net'});
 
 exports.buddyTest = function(buddyId, content) {
 
@@ -23,10 +20,10 @@ exports.buddyTest = function(buddyId, content) {
 
 exports.addBuddy = function(buddyId) {
 
-	bot.buddyProfile(buddyId, function(error, data) {
+	client.getFriendInfo(buddyId, function(error, buddys) {
 		if(!error){
-			var reply = data.buddys[0].name + '님 반갑습니다.';
-			bot.sendMessageToBuddy(buddyId, reply, null, function(error, data) {
+			var reply = buddys[0].name + '님 반갑습니다.';
+			client.sendMessage(buddyId, reply, function(error, data) {
 				if(!error){
 					console.log(data);
 				}else{
@@ -42,11 +39,11 @@ exports.addBuddy = function(buddyId) {
 
 exports.sendFromMessage = function(buddyId, content) {
 
-	bot.buddyProfile(buddyId, function(error, data) {
+	client.getFriendInfo(buddyId, function(error, buddys) {
 		if(!error){
 
-			var reply = data.buddys[0].name + ': ' + content;
-			bot.sendMessageToBuddy(buddyId, reply, null, function(error, data) {
+			var reply = buddys[0].name + ': ' + content;
+			client.sendMessage(buddyId, reply, function(error, data) {
 				if(!error){
 					console.log(data);
 				}else{
@@ -63,7 +60,7 @@ exports.sendFromMessage = function(buddyId, content) {
 
 exports.sendFromImage = function(buddyId) {
 
-	bot.sendMessageToBuddy(buddyId, null, 'image_cat', function(error, data) {
+	client.sendMessage(buddyId, fs.createReadStream('mypeople/bot_data/image_cat.jpg'), function(error, data) {
 		if(!error){
 			console.log(data);
 		}else{
@@ -75,16 +72,16 @@ exports.sendFromImage = function(buddyId) {
 
 exports.profileDownload = function(buddyId) {
 
-	bot.buddyProfile(buddyId, function(error, data) {
+	client.getFriendInfo(buddyId, function(error, buddys) {
 		if(!error){
 
-			bot.downloadFile(data.buddys[0].photoId, data.buddys[0].buddyId, function(error, data) {
+			client.download(buddys[0].photoId, function(error, data) {
 				if(!error){
 					console.log(data);
 				}else{
 					console.log(error);
 				}
-			});
+			}).pipe(fs.createWriteStream('mypeople/bot_data/download/' + buddys[0].buddyId + '.jpg'));
 
 		}else{
 			console.log(error);
@@ -117,7 +114,7 @@ exports.groupTest = function(groupId, buddyId, content, inviteTest) {
 
 exports.getMembers = function(groupId) {
 
-	bot.getMembers(groupId, function(error, data) {
+	client.getGroupMembers(groupId, function(error, buddys) {
 
 		if(!error){
 			// data.buddys
@@ -130,11 +127,11 @@ exports.getMembers = function(groupId) {
 			//   { buddyId: 'BU_1M9qHDITjlU0',
 			//     photoId: 'myp_pub:4FE5829B04234E0031',
 			//     name: '봇구' } ]
-			var members = data.buddys.map(function (user) {
+			var members = buddys.map(function (user) {
 				return user.name + ' ( ' + user.buddyId + ' )';
 			}).join('\n');
 
-			bot.sendMessageToGroup(groupId, members, null, function(error, data) {
+			client.sendGroupMessage(groupId, members, function(error, data) {
 				if(!error){
 					console.log(data);
 				}else{
@@ -151,11 +148,11 @@ exports.getMembers = function(groupId) {
 
 exports.sendFromGroup = function(groupId, buddyId, content, attache) {
 
-	bot.buddyProfile(buddyId, function(error, data) {
+	client.getFriendInfo(buddyId, function(error, buddys) {
 		if(!error){
 
-			var reply = data.buddys[0].name + ': ' + content;
-			bot.sendMessageToGroup(groupId, reply, null, function(error, data) {
+			var reply = buddys[0].name + ': ' + content;
+			client.sendGroupMessage(groupId, reply, function(error, data) {
 				if(!error){
 					console.log(data);
 				}else{
@@ -172,11 +169,11 @@ exports.sendFromGroup = function(groupId, buddyId, content, attache) {
 
 exports.createGroup = function(groupId, buddyId) {
 
-	bot.buddyProfile(buddyId, function(error, data) {
+	client.getFriendInfo(buddyId, function(error, buddys) {
 		if(!error){
 
-			var reply = data.buddys[0].name + '님 반갑습니다.';
-			bot.sendMessageToGroup(groupId, reply, null, function(error, data) {
+			var reply = buddys[0].name + '님 반갑습니다.';
+			client.sendGroupMessage(groupId, reply, function(error, data) {
 				if(!error){
 					console.log(data);
 				}else{
@@ -206,12 +203,12 @@ exports.inviteToGroup = function(groupId, buddyId, content) {
 	}).join('님, ');
 
 
-	bot.buddyProfile(buddyId, function(error, data) {
+	client.getFriendInfo(buddyId, function(error, buddys) {
 		if(!error){
 
 
-			var reply = data.buddys[0].name + '님이 ' + members + '님을 초대하였습니다.';
-			bot.sendMessageToGroup(groupId, reply, null, function(error, data) {
+			var reply = buddys[0].name + '님이 ' + members + '님을 초대하였습니다.';
+			client.sendGroupMessage(groupId, reply, function(error, data) {
 				if(!error){
 					console.log(data);
 				}else{
@@ -228,11 +225,11 @@ exports.inviteToGroup = function(groupId, buddyId, content) {
 
 exports.exitFromGroup = function(groupId, buddyId) {
 
-	bot.buddyProfile(buddyId, function(error, data) {
+	client.getFriendInfo(buddyId, function(error, buddys) {
 		if(!error){
 
-			var reply = data.buddys[0].name + '님 잘가요~ ㅠ';
-			bot.sendMessageToGroup(groupId, reply, null, function(error, data) {
+			var reply = buddys[0].name + '님 잘가요~ ㅠ';
+			client.sendGroupMessage(groupId, reply, function(error, data) {
 				if(!error){
 					console.log(data);
 				}else{
@@ -249,7 +246,7 @@ exports.exitFromGroup = function(groupId, buddyId) {
 
 exports.exitBot = function(groupId, buddyId) {
 
-	bot.exitFromGroup(groupId, function(error, data) {
+	client.exitGroup(groupId, function(error, data) {
 		if(!error){
 			console.log(data);
 		}else{
