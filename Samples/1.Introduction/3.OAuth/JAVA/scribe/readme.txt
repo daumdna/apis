@@ -2,9 +2,9 @@ Daum DNA OpenAPI Sample Info
 
 CreateDate : 2011/05/27
 UpdateDate : -
-Writer : ÀÌÁ¤ÁÖ
+Writer : ì´ì •ì£¼
 Location : Samples/1.Introduction/3.OAuth/Java
-Title : OAuth·Î ÀÎÁõÇÏ±â
+Title : OAuthë¡œ ì¸ì¦í•˜ê¸°
 Language : Java
 
 Using OpenAPI list
@@ -14,7 +14,7 @@ Using OpenAPI list
 4.https://apis.daum.net/yozm/v1_0/user/joined.xml
 
 Using external library list
-1.scribe-1.2.0 - OAuth Consumer Á¦°ø
+1.scribe-1.2.0 - OAuth Consumer ì œê³µ
 link : https://github.com/fernandezpablo85/scribe-java
 2.commons-codec-1.5
 link : http://commons.apache.org/codec/download_codec.cgi
