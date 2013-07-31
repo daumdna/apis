@@ -10,19 +10,28 @@
 	#map { width: 100%; height: 100% }
 	</style>
 	<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=DAUM_MAPS_DEMO_APIKEY" charset="utf-8"></script>
-	<script type="text/javascript">
+	<script type="text/javascript" charset="utf-8">
 	window.onload = function() {
 		var position = new daum.maps.LatLng(33.450221, 126.570135);
 
 		var map = new daum.maps.StaticMap(document.getElementById('staticmap'), {
 			center: position,
-			level: 3,
+			level: 6,
 			mapTypeId: daum.maps.MapTypeId.ROADMAP,
-			marker: [
-			         {
-			        	 position: position,
-			        	 text : 'Daum 제주 본사입니다. '
-			         }]
+			 marker: [
+                        {
+                            position: position,
+                            text: 'Daum 제주 본사입니다'
+                        },
+                        {
+                            position: new daum.maps.LatLng(33.456121, 126.560135),
+                            text: 'Jeju National Univ.'
+                        },
+                        {
+                            position: new daum.maps.LatLng(33.444221, 126.570135),
+                            text: 'ESTsoft'
+                        }
+                    ]
 		});
 
 	};
