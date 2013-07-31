@@ -12,7 +12,7 @@ namespace Daum.Dna.OpenApi.Samples.Blog
     class FileUploader
     {
         //TODO:할당받은 컨슈머키와 컨슈머 시크릿을 포함 하여 OAuth 관리개체 생성
-        private static OAuth.Manager _oauth = new OAuth.Manager("{발급 받은 Key를 입력하세요.}", "{발급 받은 Secret를 입력하세요.}", "", "");
+        private static OAuth.Manager _oauth = new OAuth.Manager("[발급 받은 Key를 입력하세요.]", "[발급 받은 Secret를 입력하세요.]", "", "");
 
         static void Main(string[] args)
         {
@@ -35,13 +35,13 @@ namespace Daum.Dna.OpenApi.Samples.Blog
             _oauth["token"] = response2["oauth_token"];
             _oauth["token_secret"] = response2["oauth_token_secret"];
 
-            string url = "http://apis.daum.net/blog/post/uploadFile.do?blogName=jeongzugo";
+            string url = "http://apis.daum.net/blog/post/uploadFile.do?blogName=블로그명을입력하세요";
 
             //전송할 인증정보를 헤더에 넣어야 하므로 헤더정보 생성
             var authzHeader = _oauth.GenerateAuthzHeader(url, "POST");
 
             //헤더 정보와 url, 파일정보를 포함하여 전송후 출력된 정보 반환
-            string ret = UploadFilesToRemoteUrl(url, new string[] { "C:\\temp\\logo.png" }, authzHeader);
+            string ret = UploadFilesToRemoteUrl(url, new string[] { "C:\\temp\\daumlogo.png" }, authzHeader);
 
             System.Console.WriteLine(ret);
         }

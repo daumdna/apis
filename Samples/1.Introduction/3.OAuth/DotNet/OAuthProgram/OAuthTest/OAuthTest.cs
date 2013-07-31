@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using DevDefined.OAuth.Consumer;
+﻿using DevDefined.OAuth.Consumer;
 using DevDefined.OAuth.Framework;
+using System.Collections.Generic;
 
-namespace Daum.Dna.OpenApi.Oauth.Test.Console
+namespace OAuthProgram
 {
-    class OAuthProgram
+    class OAuthTest
     {
-        private static void Main()
+        static void Main(string[] args)
         {
             string requestUrl = "https://apis.daum.net/oauth/requestToken";
             string userAuthorizeUrl = "https://apis.daum.net/oauth/authorize";
@@ -15,9 +15,9 @@ namespace Daum.Dna.OpenApi.Oauth.Test.Console
 
             var consumerContext = new OAuthConsumerContext
             {
-                //TODO:Daum OAuth소개 페이지(https://apis.daum.net/oauth/consumer/list)에서 등록된 Consumer 정보 입력
-                ConsumerKey = "eb3eff10-b95d-455c-8572-e7858a2b34d0",
-                ConsumerSecret = "suz6.HUjzlaG-S9ezBzFQ11FtKhQvv8cdT-9C_hWBFthpUmMTsOuUA00",
+                //Daum OAuth소개 페이지(http://dna.daum.net/myapi/authapi)에서 등록된 Consumer 정보 입력
+                ConsumerKey = "[프로필 API용 OAuth 컨슈머 등록한 뒤 발급된 Cosumer키를 입력하세요]",
+                ConsumerSecret = "[프로필 API용 OAuth 컨슈머 등록한 뒤  발급된 Cosumer Secret키를 입력하세요]",
                 SignatureMethod = SignatureMethod.HmacSha1,
             };
 
@@ -40,18 +40,16 @@ namespace Daum.Dna.OpenApi.Oauth.Test.Console
             // 얻어진 Verifier값을 포함시키기
             session.WithQueryParameters(new Dictionary<string, string>() { { "oauth_verifier", inputVerifier } });
 
-            session.WithQueryParameters(new Dictionary<string, string>() { { "content", System.Web.HttpUtility.HtmlEncode("~다!음@ #요$즘% ^특&수*문(자) -_\'발=+송\\| \"테<스>;트/") } });
-            //session.WithQueryParameters(new Dictionary<string, string>() { { "content", System.Web.HttpUtility.UrlEncode("한글") } });
-            
             // 3. 인증 후 얻은 Verifier값을 이용하여 엑세스 토큰 얻기
             DevDefined.OAuth.Framework.IToken accessToken = session.ExchangeRequestTokenForAccessToken(requestToken);
 
-            // '요즘 가입여부 확인하기' API를 통해 인증 확인하기
-            System.Console.WriteLine("OAuth를 통한 인증으로 '요즘 가입여부 확인하기'를 테스트합니다.");
-            string responseText = session.Request().Post().ForUrl("https://apis.daum.net/cafe/write_article/JJGO/JVYh.xml?").ToString();
+            // '프로필 정보보기' API를 통해 인증 확인하기
+            System.Console.WriteLine("OAuth를 통한 인증으로 '프로필 정보보기'를 테스트합니다.");
+            string responseText = session.Request().Post().ForUrl("https://apis.daum.net/profile/show.xml").ToString();
             
             System.Console.WriteLine(responseText);
             System.Console.ReadLine();
         }
+        
     }
 }
