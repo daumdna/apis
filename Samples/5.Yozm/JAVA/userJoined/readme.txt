@@ -1,9 +1,9 @@
-Daum DNA OpenAPI Sample Info
+﻿Daum DNA OpenAPI Sample Info
 
 CreateDate : 2011/05/27
 UpdateDate : -
 Writer : 이정주
-Location : Samples/1.Introduction/3.OAuth/Java
+Location : Samples\5.Yozm\JAVA\userJoined
 Title : OAuth로 인증하기
 Language : Java
 
