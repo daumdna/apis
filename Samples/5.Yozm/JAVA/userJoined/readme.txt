@@ -1,9 +1,9 @@
 ﻿Daum DNA OpenAPI Sample Info
 
 CreateDate : 2011/05/27
-UpdateDate : 2013/07/31 by 김주아
+UpdateDate : -
 Writer : 이정주
-Location : Samples/1.Introduction/3.OAuth/Java/scribe
+Location : Samples\5.Yozm\JAVA\userJoined
 Title : OAuth로 인증하기
 Language : Java
 
@@ -11,7 +11,7 @@ Using OpenAPI list
 1.https://apis.daum.net/oauth/requestToken
 2.https://apis.daum.net/oauth/authorize
 3.https://apis.daum.net/oauth/accessToken
-4.https://apis.daum.net/profile/show.xml
+4.https://apis.daum.net/yozm/v1_0/user/joined.xml
 
 Using external library list
 1.scribe-1.2.0 - OAuth Consumer 제공

@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ï»¿import java.util.Scanner;
 
 import org.scribe.builder.ServiceBuilder;
 import org.scribe.model.OAuthRequest;
@@ -10,31 +10,31 @@ import org.scribe.oauth.OAuthService;
 
 public class OuathProvider {
 	public static void main(String[] args) {
-		//OAuth ÁØºñ
+		//OAuth ì¤€ë¹„
 		OAuthService service = new ServiceBuilder()
 		.provider(DaumDnaApi.class)
-		.apiKey("eb3eff10-b95d-455c-8572-e7858a2b34d0")
-		.apiSecret("suz6.HUjzlaG-S9ezBzFQ11FtKhQvv8cdT-9C_hWBFthpUmMTsOuUA00")
+		.apiKey("[Consumer ë“±ë¡í›„ Keyë¥¼ ì…ë ¥í•˜ì„¸ìš”]")
+		.apiSecret("[Consumer ë“±ë¡í›„ Secret Keyë¥¼ ì…ë ¥í•˜ì„¸ìš”]")
 		.callback("oob")
 		.build();
 
 		Scanner in = new Scanner(System.in);
 		
-		// 1. request token ¹Ş±â
+		// 1. request token ë°›ê¸°
 	    Token requestToken = service.getRequestToken();
 
-	    // 2. »ç¿ëÀÚ ÀÎÁõ ÇÏ±â
-	    System.out.println("À¥ºê¶ó¿ìÀú¸¦ ½ÇÇàÇÏ¿© ´ÙÀ½ URLÀ» Á¢¼ÓÇÏ¼¼¿ä.");
+	    // 2. ì‚¬ìš©ì ì¸ì¦ í•˜ê¸°
+	    System.out.println("ì›¹ë¸Œë¼ìš°ì €ë¥¼ ì‹¤í–‰í•˜ì—¬ ë‹¤ìŒ URLì„ ì ‘ì†í•˜ì„¸ìš”.");
 	    System.out.println(service.getAuthorizationUrl(requestToken) + "?" + requestToken.getRawResponse());
-	    System.out.print("À¥ºê¶ó¿ìÀú¿¡¼­ ÀÎÁõ ÈÄ ¹İÈ¯ µÈ °ªÀ» ÀÔ·ÂÇÏ¼¼¿ä:");
+	    System.out.print("ì›¹ë¸Œë¼ìš°ì €ì—ì„œ ì¸ì¦ í›„ ë°˜í™˜ ëœ ê°’ì„ ì…ë ¥í•˜ì„¸ìš”:");
 	    Verifier verifier = new Verifier(in.nextLine());
 	    System.out.println();
 
-	    // 3. ÀÎÁõ ÈÄ ¾òÀº Verifier°ªÀ» ÀÌ¿ëÇÏ¿© ¿¢¼¼½º ÅäÅ« ¾ò±â
+	    // 3. ì¸ì¦ í›„ ì–»ì€ Verifierê°’ì„ ì´ìš©í•˜ì—¬ ì—‘ì„¸ìŠ¤ í† í° ì–»ê¸°
 	    Token accessToken = service.getAccessToken(requestToken, verifier);
 	    
-	    // '¿äÁò °¡ÀÔ¿©ºÎ È®ÀÎÇÏ±â' API¸¦ ÅëÇØ ÀÎÁõ È®ÀÎÇÏ±â
-	    OAuthRequest request = new OAuthRequest(Verb.GET, "https://apis.daum.net/yozm/v1_0/user/joined.xml");
+	    // 'í”„ë¡œí•„ ì •ë³´ ì¡°íšŒ APIë¥¼ í†µí•´ ì¸ì¦ í™•ì¸í•˜ê¸°
+	    OAuthRequest request = new OAuthRequest(Verb.GET, "https://apis.daum.net/profile/show.xml");
 	    service.signRequest(accessToken, request);
 	    Response response = request.send();
 	    System.out.println(response.getBody());
