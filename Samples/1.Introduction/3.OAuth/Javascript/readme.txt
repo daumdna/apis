@@ -1,10 +1,10 @@
-Daum DNA OpenAPI Sample Info
+ï»¿Daum DNA OpenAPI Sample Info
 
 CreateDate : 2011/05/27
 UpdateDate : -
-Writer : ÀÌÁ¤ÁÖ
+Writer : ì´ì •ì£¼
 Location : Samples/1.Introduction/3.OAuth/Javascript
-Title : OAuth·Î ÀÎÁõÇÏ±â
+Title : OAuthë¡œ ì¸ì¦í•˜ê¸°
 Language : Javascript
 
 Using OpenAPI list
@@ -14,5 +14,5 @@ Using OpenAPI list
 4.http://apis.daum.net/blog/category/list.do
 
 Using external library list
-1.DevDefined OAuth - OAuth Consumer Á¦°ø
+1.DevDefined OAuth - OAuth Consumer ì œê³µ
 link : http://code.google.com/p/devdefined-tools/wiki/OAuth
