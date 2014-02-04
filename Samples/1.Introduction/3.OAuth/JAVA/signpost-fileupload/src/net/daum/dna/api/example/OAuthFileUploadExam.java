@@ -157,7 +157,7 @@ public class OAuthFileUploadExam {
 				HttpPost writeArticle = new HttpPost(API_URL + "/blog/post/write.do");
 	
 				List<NameValuePair> params = new ArrayList<NameValuePair>();
-				params.add(new BasicNameValuePair("blogName", "bigbanggirl"));
+				params.add(new BasicNameValuePair("blogName", "[블로그명을 입력하세요(http://blog.daum.net/블로그명)]"));
 				params.add(new BasicNameValuePair("title", "글 제목"));
 				params.add(new BasicNameValuePair("content", "글 본문"));
 				params.add(new BasicNameValuePair("fileUrl", fileUrl));
