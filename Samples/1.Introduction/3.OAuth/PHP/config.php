@@ -7,9 +7,9 @@ $authorize_url = 'https://apis.daum.net/oauth/authorize';
 $access_token_url = 'https://apis.daum.net/oauth/accessToken';
 
 // Consumer 정보 (Consumer를 등록하면 얻어올 수 있음.)
-$consumer_key = "[Consumer ¿¿¿ ¿ ¿ ¿¿ ¿¿¿¿.]";
-$consumer_secret = "[Consumer ¿¿¿ ¿ ¿ ¿¿ ¿¿¿¿.]";
-$callback_url = "[Consumer ¿¿¿ ¿ ¿ ¿¿ ¿¿¿¿.]";
+$consumer_key = "[Consumer 등록을 한 후 각자 넣으세요.]";
+$consumer_secret = "[Consumer 등록을 한 후 각자 넣으세요.]";
+$callback_url = "[Consumer 등록을 한 후 각자 넣으세요.]";
 
 // API prefix (보호된 자원이 있는 URL의 prefix)
 $api_url = 'https://apis.daum.net';
