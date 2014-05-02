@@ -5,8 +5,9 @@
     "start": "node app"
   },
   "dependencies": {
-    "express": "latest",
-    "jade": "latest",
-    "request": "latest"
+    "express": "^3.5",
+    "jade": "^1.3",
+    "request": "^2.34",
+    "connect": "^2.14"
   }
 }
