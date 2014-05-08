@@ -1,4 +1,4 @@
-﻿Daum DNA OpenAPI Sample Info
+Daum DNA OpenAPI Sample Info
 
 CreateDate : 2011/05/27
 UpdateDate : 2011/05/27

@@ -2,9 +2,9 @@ Daum DNA OpenAPI Sample Info
 
 CreateDate : 2011/05/27
 UpdateDate : 2011/05/27
-Writer : юла╓аж
+Writer : Л²╢Л═∙Лё╪
 Location : Samples/2.Search/1.Basic/Python
-Title : ╢э╪Ь ╟к╩Ж го╠Б
+Title : К▀╗Л┬° Й╡─Л┐┴ М∙≤Й╦╟
 Language : Python
 
 Using OpenAPI list

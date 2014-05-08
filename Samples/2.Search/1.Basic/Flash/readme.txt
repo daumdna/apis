@@ -2,9 +2,9 @@ Daum DNA OpenAPI Sample Info
 
 CreateDate : 2011/05/27
 UpdateDate : 2011/05/27
-Writer : ÀÌÁ¤ÁÖ
+Writer : ì´ì •ì£¼
 Location : Samples/2.Search/1.Basic/Flash
-Title : ´Ü¼ø °Ë»ö ÇÏ±â
+Title : ë‹¨ìˆœ ê²€ìƒ‰ í•˜ê¸°
 Language : Flash
 
 Using OpenAPI list
