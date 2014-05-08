@@ -1,6 +1,6 @@
 ﻿<?php
 // Request Token 요청 주소
-$request_token_Url = 'https://apis.daum.net/oauth/requestToken';
+$request_token_url = 'https://apis.daum.net/oauth/requestToken';
 // 사용자 인증 URL
 $authorize_url = 'https://apis.daum.net/oauth/authorize';
 // Access Token URL
